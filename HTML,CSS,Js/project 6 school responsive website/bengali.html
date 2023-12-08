@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bengali Faculty</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Roboto Slab", serif;
+        list-style: none;
+        text-decoration: none;
+        scroll-behavior: smooth;
+        scroll-padding-top: 1rem;
+      }
+      :root {
+        --bg-color: #ffffff;
+        --secound-bg-color: #f9f9f9;
+        --text-color: rgb(255, 255, 255);
+        --secound-color: #161616;
+        --main-color: #ff0015;
+        --main2-color: #00cc44;
+        --other-color: #6a6a6a;
+        --bbgg-color: rgba(128, 128, 128, 0.568);
+        --big-font: 4.7rem;
+        --h2-font: 3.8rem;
+        --p-font: 1rem;
+      }
+      .heading {
+        text-align: center;
+      }
+      .heading h2 {
+        font-size: 3.8rem;
+        color: #161616;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.6rem;
+      }
+      .service-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .box {
+        display: flex;
+        background: var(--bg-color);
+        padding: 45px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.35s;
+      }
+      .identification {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: var(--secound-color);
+        text-decoration: none;
+        padding-left: 100px;
+      }
+      .box:hover {
+        box-shadow: 0px 20px 30px rgba(55, 7, 23, 0.397);
+      }
+
+      /* image slidebar start */
+      .sl-body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #1d212b;
+      }
+
+      .img-slider {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        margin: 10px;
+        background: #1d212b;
+      }
+
+      .img-slider .slide {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        clip-path: circle(0% at 0 50%);
+      }
+
+      .img-slider .slide.active {
+        clip-path: circle(150% at 0 50%);
+        transition: 2s;
+        transition-property: clip-path;
+      }
+
+      .img-slider .slide img {
+        z-index: 1;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .img-slider .slide .info {
+        position: absolute;
+        top: 0;
+        padding: 15px 30px;
+      }
+
+      .img-slider .slide .info h2 {
+        color: #fff;
+        font-size: 45px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+
+      .img-slider .slide .info p {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        width: 60%;
+        padding: 10px;
+        border-radius: 4px;
+      }
+
+      .img-slider .navigation {
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .img-slider .navigation .btn {
+        background: rgba(255, 255, 255, 0.5);
+        width: 12px;
+        height: 12px;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .img-slider .navigation .btn.active {
+        background: #2696e9;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 820px) {
+        .img-slider {
+          width: 600px;
+          height: 375px;
+        }
+
+        .img-slider .slide .info {
+          padding: 10px 25px;
+        }
+
+        .img-slider .slide .info h2 {
+          font-size: 35px;
+        }
+
+        .img-slider .slide .info p {
+          width: 70%;
+          font-size: 15px;
+        }
+
+        .img-slider .navigation {
+          bottom: 25px;
+        }
+
+        .img-slider .navigation .btn {
+          width: 10px;
+          height: 10px;
+          margin: 8px;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .img-slider {
+          width: 400px;
+          height: 250px;
+        }
+
+        .img-slider .slide .info {
+          padding: 10px 20px;
+        }
+
+        .img-slider .slide .info h2 {
+          font-size: 30px;
+        }
+
+        .img-slider .slide .info p {
+          width: 80%;
+          font-size: 13px;
+        }
+
+        .img-slider .navigation {
+          bottom: 15px;
+        }
+
+        .img-slider .navigation .btn {
+          width: 8px;
+          height: 8px;
+          margin: 6px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .img-slider {
+          width: 320px;
+          height: 200px;
+        }
+
+        .img-slider .slide .info {
+          padding: 5px 10px;
+        }
+
+        .img-slider .slide .info h2 {
+          font-size: 25px;
+        }
+
+        .img-slider .slide .info p {
+          width: 90%;
+          font-size: 11px;
+        }
+
+        .img-slider .navigation {
+          bottom: 10px;
+        }
+      }
+
+      /* media quary */
+      @media (max-width: 729px) {
+        .heading h2 {
+          font-size: 2.8rem;
+        }
+      }
+      @media (max-width: 308px) {
+        .heading h2 {
+          font-size: 1.8rem;
+        }
+      }
+      @media (max-width: 745px) {
+        .box {
+          display: flex;
+          background: var(--bg-color);
+          padding: 45px 30px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.35s;
+          flex-wrap: wrap;
+        }
+        .identification {
+          font-size: 22px;
+          font-weight: 600;
+          margin-bottom: 15px;
+          color: var(--secound-color);
+          text-decoration: none;
+          padding: 10px;
+        }
+      }
+      @media (max-width: 370px) {
+        .identification {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+      @media (max-width: 250px) {
+        .identification {
+          font-size: 12px;
+          font-weight: 300;
+        }
+        img {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 805px) {
+        .slide img {
+          width: 600px;
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h2>Bengali Faculty Members</h2>
+    </div>
+    <div class="service-content">
+      <div class="box">
+        <img src="image/teacher2.jpg" alt="" width="240px" />
+        <div class="identification">
+          <h3>Debargha Nandi.</h3>
+          <br />
+          <b>&#10022; Qualification:</b>
+          "8th Pass" <br />
+          <b>&#10022; Depertment:</b>
+          "Bengali" <br />
+          <b>&#9993; Contact:</b>
+          "debarghanandi.india@gmail.com" <br />
+          <b>&#9743; Mobile:</b>
+          "+91 8768367122"
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="image/teacher2.jpg" alt="" width="240px" />
+        <div class="identification">
+          <h3>Debargha Nandi.</h3>
+          <br />
+          <b>&#10022; Qualification:</b>
+          "8th Pass" <br />
+          <b>&#10022; Depertment:</b>
+          "Bengali" <br />
+          <b>&#9993; Contact:</b>
+          "debarghanandi.india@gmail.com" <br />
+          <b>&#9743; Mobile:</b>
+          "+91 8768367122"
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="image/teacher2.jpg" alt="" width="240px" />
+        <div class="identification">
+          <h3>Debargha Nandi.</h3>
+          <br />
+          <b>&#10022; Qualification:</b>
+          "8th Pass" <br />
+          <b>&#10022; Depertment:</b>
+          "Bengali" <br />
+          <b>&#9993; Contact:</b>
+          "debarghanandi.india@gmail.com" <br />
+          <b>&#9743; Mobile:</b>
+          "+91 8768367122"
+        </div>
+      </div>
+    </div>
+
+    <section class="sl-body">
+      <div class="img-slider">
+        <div class="slide active">
+          <img src="image/1.JPG" alt="" />
+          <div class="info">
+            <h2>Slide 01</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="image/2.JPG" alt="" />
+          <div class="info">
+            <h2>Slide 02</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="image/3.JPG" alt="" />
+          <div class="info">
+            <h2>Slide 03</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="image/4.JPG" alt="" />
+          <div class="info">
+            <h2>Slide 04</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="image/5.JPG" alt="" />
+          <div class="info">
+            <h2>Slide 05</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var slides = document.querySelectorAll(".slide");
+        var btns = document.querySelectorAll(".btn");
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+
+            btns.forEach((btn) => {
+              btn.classList.remove("active");
+            });
+          });
+
+          slides[manual].classList.add("active");
+          btns[manual].classList.add("active");
+        };
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+          let active = document.getElementsByClassName("active");
+          let i = 1;
+
+          var repeater = () => {
+            setTimeout(function () {
+              [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove("active");
+              });
+
+              slides[i].classList.add("active");
+              btns[i].classList.add("active");
+              i++;
+
+              if (slides.length == i) {
+                i = 0;
+              }
+              if (i >= slides.length) {
+                return;
+              }
+              repeater();
+            }, 10000);
+          };
+          repeater();
+        };
+        repeat();
+      </script>
+    </section>
+  </body>
+</html>

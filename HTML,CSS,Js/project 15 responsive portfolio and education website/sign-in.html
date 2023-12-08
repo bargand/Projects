@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link to box icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(img/logWALL.jpg);
+        }
+        .container{
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: #ffffffec;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px #0000001a;
+        }
+        .container .form{
+            padding: 30px;
+        }
+        .container .form .title{
+            position: relative;
+            font-weight: 600;
+            font-size: 27px;
+        }
+        .form .title::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: #005a56;
+            border-radius: 25px;
+        }
+        .form .input-field{
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .input-field input{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 0 35px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            border-top: 2px solid transparent;
+            transition: all 0.2s ease;
+            border-radius: 10px;
+            background: #fff0;
+        }
+        .input-field input:is(:focus, :valid){
+            border-bottom-color: #005a56;
+        }
+        .input-field i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 23px;
+        }
+        .input-field input:is(:focus, :valid) ~ i{
+            color: #005a56;
+        }
+        .input-field i.icon{
+            left: 0;
+        }
+
+        .form .checkbox-text{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .checkbox-text .checkbox-content{
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-content input{
+            margin: 0 8px -2px 4px;
+            accent-color: #005a56;
+        }
+        .form .text{
+            color: #333;
+            font-size: 14px;
+        }
+        .form a.text{
+            color: #005a56;
+            text-decoration: none;
+        }
+        .form a:hover{
+            text-decoration: underline;
+        }
+        .form .button{
+            margin-top: 35px;
+        }
+        .form .button input{
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background: #005a56;
+            cursor: pointer;
+            transition: all o.35s ease;
+        }
+        .button input:hover{
+            background: #002b28;
+        }
+        .form .login-signup{
+            margin-top: 30px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Your Email" required>
+                        <i class='bx bx-envelope icon'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter Your Password" required>
+                        <i class='bx bx-lock icon'></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember Me</label>
+                        </div>
+                        <a href="#" class="text">Forget Password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Login Now">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Not Registered?
+                        <a href="sign-up.html" class="text signup-text">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.mainContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.mainContainerLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.mainContainerLeft img{
+    width: 600px;
+}
+.mainContainerRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mainContainerRight h1{
+    padding-bottom: 40px;
+    font-size: 115px;
+}
+.StartGameBtn{
+    cursor: pointer;
+    background: #000000;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 156px;
+    font-size: 16px;
+}
+.StartGameBtn:hover{
+    background-color: transparent;
+    color: #000;
+    transition: all ease-in-out 0.4s;
+    transform: rotateY('20deg');
+}

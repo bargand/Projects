@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>beautiful animation</title>
+    <style>
+      .survice-sec {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: cornsilk;
+      }
+
+      .survice-ul {
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .survice-ul li {
+        box-sizing: border-box;
+        width: 15em;
+        height: 3em;
+        font-size: 20px;
+        border-radius: 0.5em;
+        margin: 0.5em;
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+        color: #000000;
+        font-family: sans-serif;
+        text-transform: capitalize;
+        line-height: 3em;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .survice-ul li:nth-child(odd) {
+        background: linear-gradient(to right, orange, tomato);
+        text-align: left;
+        padding-left: 10%;
+        transform: perspective(500px) rotateY(45deg);
+      }
+
+      .survice-ul li:nth-child(even) {
+        background: linear-gradient(to left, orange, tomato);
+        text-align: right;
+        padding-right: 10%;
+        transform: perspective(500px) rotateY(-45deg);
+      }
+
+      .survice-ul li:nth-child(odd):hover {
+        transform: perspective(200px) rotateY(45deg);
+        padding-left: 5%;
+      }
+
+      .survice-ul li:nth-child(even):hover {
+        transform: perspective(200px) rotateY(-45deg);
+        padding-right: 5%;
+      }
+      @media (max-width: 480px) {
+        .survice-ul li {
+          width: 10em;
+          height: 3em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="survice-sec">
+      <ul class="survice-ul">
+        <li>HOME</li>
+        <li>PRODUCTS</li>
+        <li>SERVICES</li>
+        <li>CONTACT</li>
+        <li>HOME</li>
+        <li>PRODUCTS</li>
+        <li>SERVICES</li>
+        <li>CONTACT</li>
+      </ul>
+    </section>
+  </body>
+</html>

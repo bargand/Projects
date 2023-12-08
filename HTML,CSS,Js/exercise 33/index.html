@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Color variable</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --color1: green;
+            --color2: red;
+            --color3: #dbdada;
+        }
+        nav {
+            width: 100vw;
+            height: 8vh;
+            padding: 0px 100px;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color3);
+        }
+        nav a{
+            color: var(--color1);
+            list-style: none;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav a:hover{
+            color: var(--color2);
+            text-decoration: underline;
+            transition: all ease-in-out .4s;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="" alt="">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>

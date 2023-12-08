@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --navbar-height:59px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.logo{
+    margin: 10px 30px;
+}
+.logo img {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    /* border: 2px solid red;
+    color: red; */
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+.navbar ul{
+    display: flex;
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar::before{
+    content: " ";
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+.navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+.navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.navbar ul li a:hover{
+    color: rgb(255, 0, 21);
+    background-color: rgba(255, 255, 255, 0.781);
+    transition: ease-in .40s;
+}
+
+
+/*HOME SECTION*/
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 480px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: " ";
+    background: url(img/10.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: rgb(255, 0, 128) ;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+#home p{
+    color: chocolate;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+
+}
+/*secondary conteiner*/
+#service{
+    margin-top: -70px;
+    display: flex;
+    color: chocolate;
+    font-family: 'Roboto Mono', monospace;
+}
+#service .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 28px;
+    background: color #f2f2f2; ;
+}
+#service .box img{
+    width: 200px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    border-radius: 28px;
+    box-shadow: 0px 29px 33px -18px rgba(236, 71, 71, 0.63);
+}
+/* clint section */
+#client-section{
+    position: revert;              /*this in relative but my opinion is this so this line can suffer me*/
+    height: 280px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("img/6.jpg");
+    width: 100%;
+    height: 70%;
+    z-index: -1;
+    opacity: 0.5;
+}
+#client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clinte-item{
+    padding: 34px;
+}
+#client img{
+    height: 60px;
+    border-radius: 50%;
+    opacity: 100;
+}
+.h-client{
+    font-size: 2.8rem;
+    padding: 10px;
+    font-family: 'Baloo Bhai 2', cursive;
+    color: rgb(255, 0, 128);
+}
+/*contact sec*/
+.h-contact{
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+    padding-top: 190px;
+    color:rgb(255, 0, 128);
+    font-size: 2.8rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+}
+/*subscribe sec*/
+.contact{
+    background: #161616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact h2{
+    font-family: 'Baloo Bhai 2', cursive;
+    color: rgb(255, 0, 128);
+    font-size: 1.9rem;
+}
+.contact .newslatter{
+    font-family: 'Roboto Mono', monospace;
+    background: white;
+    margin-top: 1rem;
+    border-radius: 30px;
+    padding: 4px 10px;
+    max-width: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact .newslatter input{
+    border: none;
+    outline: none;
+}
+.contact .newslatter .cta{
+    background:rgb(255, 0, 128);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.contact .newslatter .cta:hover{
+    background: transparent;
+    color:rgb(255, 0, 128);
+    border-bottom: 2px solid rgb(255, 0, 128);
+    transition: ease .40s;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 19px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+
+}
+footer{
+    font-family: 'Bebas Neue', cursive;
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
+/*utility class*/
+.h-primary{
+    font-size: 2.8rem;
+    padding: 100px;
+    color: rgb(255, 0, 128) ;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.h-secondary{
+    font-size: 1.9rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.1rem;
+    border-radius: 18px;
+    font-family: 'Bebas Neue', cursive;
+}
+.btn:hover{
+    color: rgb(97, 1, 1);
+    background: transparent;
+    /* transform: translateY(-5px); */
+    cursor: pointer;
+    transition: ease-in 0.40s;
+}
+.center{
+    text-align: center;
+    margin-top: 22px;
+}
+

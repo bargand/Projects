@@ -1,0 +1,45 @@
+body, html{
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+}
+.scr-container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 4em;
+    line-height: 1.5;
+}
+h1{
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+}
+p{
+    margin-bottom: 2em;
+}
+.progress{
+    height: 10px;
+    background: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;left: 0;
+}
+.progress_highlight{
+    transition: width .15s linear;
+    background-image: radial-gradient(circle, #833ab4 0%, #ff8080 53%, #fcb045 100%);
+    height: 100%;
+    width: 100%;
+}
+footer{
+    box-sizing: border-box;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    color: #1b1e23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4em;
+}

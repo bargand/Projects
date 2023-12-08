@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch my cv</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            background-color: #fff;
+            margin: 50px;
+            box-shadow: 0 50px 75px rgba(0,0,0,0.1);
+            border-left: 50px solid #fff;
+            border-right: 50px solid #fff;
+        }
+        .container .top{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 40px;
+            padding-bottom: 0;
+        }
+        .container .top .imgBx{
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .container .top .imgBx .box{
+            position: relative;
+            width: 70%;
+            min-width: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+        .container .top .imgBx .box img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container .top .profileText{
+            position: relative;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .container .top .profileText h3{
+            font-size: 3em;
+            letter-spacing: 0.1em;
+            line-height: 1.2em;
+            font-weight: 600;
+            color: #333;
+        }
+        .container .top .profileText h3 span{
+            position: relative;
+            font-size: 0.5em;
+            font-weight: 300;
+            top: -10px;
+        }
+        .container .contentBox{
+            position: relative;
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 0 40px 40px;
+        }
+        .container .contentBox h3{
+            border-left: 4px solid #ef0454;
+            padding-left: 10px;
+            line-height: 1em;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+        .container .contentBox ul{
+            position: relative;
+            margin: 10px 0;
+        }
+        .container .contentBox ul li{
+            list-style: none;
+            margin: 25px 0;
+            line-height: 1em;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+        }
+        .container .contentBox ul li ion-icon{
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #3590d2;
+        }
+        .container .contentBox ul.education li{
+            flex-direction: column;
+            margin: 25px 0;
+        }
+        h5{
+            color: #3590d2;
+        }
+        h4{
+            color: #333;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+        h6{
+            color: #666;
+            font-weight: 300;
+            font-size: 1em;
+        }
+        .language li{
+            flex-direction: column;
+        }
+        .language li span{
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .language .percent{
+            position: relative;
+            width: 100%;
+            background: #e3e3ee;
+            height: 6px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            display: block;
+            overflow: hidden;
+        }
+        .language .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #3590d2;
+        }
+        .container .contentBox ul.interest{
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .container .contentBox ul.interest li{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .container .contentBox ul.interest li .icon{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: #3590d2;
+            color: #fff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .contentBox ul.interest li .icon ion-icon{
+            color: #fff;
+            margin-right: 0;
+        }
+        p{
+            font-style: 300;
+        }
+        .rightSide{
+            padding-left: 40px;
+        }
+        .about .box{
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+        .about .box .year_company{
+            min-width: 150px;
+            margin-bottom: 10px;
+        }
+        .about .box .year_company h5{
+            color: #333;
+            font-weight: 600;
+        }
+        .about .box .year_company h5:nth-child(1){
+            color: #3590d2;
+        }
+        .about .box .text h4{
+            color: #3590d2;
+            font-size: 16px;
+            margin: 0;
+        }
+        .about.skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .about.skills .box h4{
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .about.skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #e3e3ee;
+        }
+        .about.skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #3590d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="imgBx">
+                <div class="box">
+                    <img src="img/cv.jpg" alt="CV-img" width="100px">
+                </div>
+            </div>
+            <div class="profileText">
+                <h3>Debargha<br>Nandi<br><span>Agriculture Student</span></h3>
+            </div>
+        </div>
+        <div class="contentBox">
+            <div class="leftSide">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><ion-icon name="call"></ion-icon></span>
+                        <span class="text">+91 8768367122</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="mail-unread"></ion-icon></span>
+                        <span class="text">debarghanandi.india@gmail.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="planet"></ion-icon></span>
+                        <span class="text">www.bargand.com</span>
+                    </li>
+                    <li>
+                        <span class="icon"><ion-icon name="location"></ion-icon></span>
+                        <span class="text">Hooghly, Westbengal, India,</span>
+                    </li>
+                </ul>
+                <h3>Education</h3>
+                <ul class="education">
+                    <li>
+                        <h5>2017 - 2018</h5>
+                        <h4>Complete Secondary Education</h4>
+                        <h6>Samantakhanda H.K. Roy High School(H.S)</h6>
+                    </li>
+                    <li>
+                        <h5>2019 - 2020</h5>
+                        <h4>Complete Higher Secondary Education</h4>
+                        <h6>Samantakhanda H.K. Roy High School(H.S)</h6>
+                    </li>
+                    <li>
+                        <h5>2020 - 2024</h5>
+                        <h4>Bachelor Degree in Agriculture Science</h4>
+                        <h6>Sri Faiyaz Hussain PG College</h6>
+                    </li>
+                </ul>
+                <h3>Language</h3>
+                <ul class="language">
+                    <li>
+                        <span class="text">Bengali</span>
+                        <span class="percent">
+                            <div style="width: 99%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">Hindi</span>
+                        <span class="percent">
+                            <div style="width: 80%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">English</span>
+                        <span class="percent">
+                            <div style="width: 50%;"></div>
+                        </span>
+                    </li>
+                </ul>
+                <h3>Interest</h3>
+                <ul class="interest">
+                    <li><span class="icon"><ion-icon name="leaf"></ion-icon></span>Gardening</li>
+                    <li><span class="icon"><ion-icon name="code-slash"></ion-icon></span>Coding</li>
+                    <li><span class="icon"><ion-icon name="game-controller"></ion-icon></span>Gaming</li>
+                    <li><span class="icon"><ion-icon name="book"></ion-icon></span>Reading</li>
+                </ul>
+            </div>
+
+            <div class="rightSide">
+                <div class="about">
+                    <h3>Profile</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat possimus molestiae minus magnam fugiat vel ea, amet exercitationem. Architecto, doloremque. Rem accusamus vel sapiente sit, et perspiciatis, quasi, adipisci nesciunt dolore dolorum reprehenderit accusantium?<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eius excepturi autem numquam quidem et delectus? In aliquam repudiandae, ullam quidem totam consequuntur eligendi quod deleniti nulla perspiciatis libero, voluptate numquam eaque tenetur. Vitae.</p>
+                </div>
+                <div class="about">
+                    <h3>Experience</h3>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2031 - 2037</h5>
+                            <h5>Company Name</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Crop Scientist</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi similique dolorum, nihil ab et illum. Expedita, at? Ipsum, nisi ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, facere!</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2031 - 2037</h5>
+                            <h5>Company Name</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Crop Scientist</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi similique dolorum, nihil ab et illum. Expedita, at? Ipsum, nisi ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, minima. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, ullam. Lorem ipsum dolor sit,</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2031 - 2037</h5>
+                            <h5>Company Name</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Crop Scientist</h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi similique dolorum, nihil ab et illum. Expedita, at? Ipsum, nisi ipsa! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about skills">
+                    <h3>Professional Skills</h3>
+                    <div class="box">
+                        <h4>Html</h4>
+                        <span class="percent">
+                            <div style="width: 95%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>CSS</h4>
+                        <span class="percent">
+                            <div style="width: 75%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>Javascript</h4>
+                        <span class="percent">
+                            <div style="width: 15%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>Bootstrap</h4>
+                        <span class="percent">
+                            <div style="width: 10%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>Python</h4>
+                        <span class="percent">
+                            <div style="width: 50%;"></div>
+                        </span>
+                    </div>
+                    <div class="box">
+                        <h4>Microsoft Excel</h4>
+                        <span class="percent">
+                            <div style="width: 70%;"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

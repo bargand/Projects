@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div class="container">
+      <form action="POST" data-netlify="true">
+        <h3>GET IN TOUCH</h3>
+        <input type="text" id="name" placeholder="your name" required />
+        <input type="email" id="email" placeholder="email id" required />
+        <input type="text" id="phone" placeholder="phone number" required />
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="1"
+          placeholder="enter your valuable message"
+        ></textarea>
+        <input type="file" name="myfile" id="myfile" placeholder="Upload File" rows="7">
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+  </body>
+</html>

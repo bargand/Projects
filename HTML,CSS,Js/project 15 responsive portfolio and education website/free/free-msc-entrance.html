@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link with boxicon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>video | Msc.Entrance</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: normal;
+      }
+      :root {
+        --bg-color: #ffffff;
+        --bg2-color: #f99fb6;
+        --bg3-color: #9fbef9;
+        --secound-bg-color: #f9f9f9;
+        --text-color: #fff;
+        --main2-color: #005a56;
+        --main-color: #ff1e00;
+        --text2-color: #6a6a6a;
+        /* --big-font: 5.7rem; */
+        --big-font: 4.7rem;
+        --h2-font: 3.8rem;
+        --p-font: 1rem;
+      }
+      body {
+        background: #eee;
+      }
+      .heading {
+        text-align: center;
+      }
+      .heading h2 {
+        text-align: center;
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        padding-top: 30px;
+        color: #005a56;
+      }
+      @media (max-width: 468px) {
+        .heading h2 {
+          font-size: 2.8rem;
+          font-weight: 400;
+        }
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 5px 2%;
+      }
+      .container .main-video {
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .container .main-video video {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .container .main-video .title {
+        color: #333;
+        font-size: 23px;
+        padding: 15px 0 15px 0;
+      }
+      .container .video-list {
+        background: #fff;
+        border-radius: 5px;
+        height: 520px;
+        overflow-y: scroll;
+      }
+      .container .video-list::-webkit-scrollbar {
+        width: 7px;
+      }
+      .container .video-list::-webkit-scrollbar-track {
+        background: #ccc;
+        border-radius: 50px;
+      }
+      .container .video-list::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 50px;
+      }
+      .container .video-list .vid video {
+        width: 200px;
+        border-radius: 5px;
+      }
+      .container .video-list .vid {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #f7f7f7;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0.1);
+        cursor: pointer;
+      }
+      .container .video-list .vid:hover {
+        background: #eee;
+      }
+      .container .video-list .vid.active {
+        background: #005a56;
+      }
+      .container .video-list .vid.active .title {
+        color: #fff;
+      }
+      .container .video-list .vid .title {
+        color: #333;
+        font-size: 17px;
+      }
+
+      @media (max-width: 1202px) {
+        .container {
+          grid-template-columns: 1.5fr 1fr;
+          padding: 10px;
+        }
+      }
+      @media (max-width: 1000px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 468px) {
+        .container .video-list .vid video {
+          width: 100px;
+          border-radius: 2px;
+        }
+      }
+      @media (max-width: 270px) {
+        .container {
+          padding-left: 0;
+        }
+      }
+
+      /* pdf section */
+      .pdf{
+        background: #fff;
+      }
+      .pdf-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-gap: 2rem;
+        align-items: center;
+        margin-top: 4.4rem;
+        padding: 40px;
+      }
+      .pdf-content a{
+        text-decoration: none;
+      }
+      .box {
+        background: #fff;
+        padding: 45px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.35s;
+        box-shadow: 1px 3px 5px 3px #00000021;
+      }
+      .box:hover{
+        background: #eee;
+      }
+      .box i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #005a56;
+        font-size: 3.8rem;
+        width: 80px;
+        height: 80px;
+        border: 2px solid #808080bd;
+        border-radius: 50%;
+        background-color: #80808063;
+        margin-bottom: 18px;
+      }
+      .box h3 {
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #005a56;
+        text-decoration: none;
+      }
+      @media (max-width: 323px){
+        .pdf-content {
+        padding: 11px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="heading">
+        <h2>Msc. Entrance All Classes</h2>
+      </div>
+      <div class="container">
+        <div class="main-video">
+          <div class="video">
+            <video src="video/video1.mp4" width="800px" controls muted></video>
+            <h3 class="title">Msc. 1st Video Mathematics</h3>
+          </div>
+        </div>
+        <div class="video-list">
+          <div class="vid active">
+            <video src="video/video1.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 1st Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video2.mp4" width="800px" muted poster="video/pdfIMG.png"></video>
+            <h3 class="title">Msc. 2nd Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video3.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 3rd Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video4.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 4th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video5.mp4" width="800px" muted></video>
+            <h3 class="title">Autoplay 5th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video6.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 6th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video7.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 7th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video8.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 8th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video9.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 9th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video10.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 10th Video Mathematics</h3>
+          </div>
+          <div class="vid">
+            <video src="video/video11.mp4" width="800px" muted></video>
+            <h3 class="title">Msc. 11th Video Mathematics</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- pdf section -->
+    <section class="pdf">
+      <div class="heading">
+        <h2>Download PDF</h2>
+      </div>
+
+      <div class="pdf-content">
+        <a href="https://www.codewithharry.com/notes/">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 1st Video Mathematics</h3>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YFWb2C8rins_0bL2xhzu4nzQ3kz4ygda/view?usp=sharing">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 2nd Video Mathematics</h3>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YFWb2C8rins_0bL2xhzu4nzQ3kz4ygda/view?usp=sharing">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 3rd Video Mathematics</h3>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YFWb2C8rins_0bL2xhzu4nzQ3kz4ygda/view?usp=sharing">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 4th Video Mathematics</h3>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YFWb2C8rins_0bL2xhzu4nzQ3kz4ygda/view?usp=sharing">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 5th Video Mathematics</h3>
+            </div>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1YFWb2C8rins_0bL2xhzu4nzQ3kz4ygda/view?usp=sharing">
+            <div class="box">
+                <i class="bx bxs-file-pdf"></i>
+                <h3>Msc. 6th Video Mathematics</h3>
+            </div>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      let listVideo = document.querySelectorAll(".video-list .vid");
+      let mainVideo = document.querySelector(".main-video video");
+      let title = document.querySelector(".main-video .title");
+
+      listVideo.forEach((video) => {
+        video.onclick = () => {
+          listVideo.forEach((vid) => vid.classList.remove("active"));
+          video.classList.add("active");
+          if (video.classList.contains("active")) {
+            let src = video.children[0].getAttribute("src");
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+    <title>Bargand|Plant Science</title>
+   <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+:root {
+  --bg-color: #ffffff;
+  --secound-bg-color: #f9f9f9;
+  --text-color: #fff;
+  --secound-color: #161616;
+  --main2-color: #ef0454;
+  --main-color: #00cc44;
+  --other-color: #6a6a6a;
+  --big-font: 5.7rem;
+  --h2-font: 3.8rem;
+  --p-font: 1rem;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 10px 6%;
+}
+.logo i {
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+span {
+  color: var(--main-color);
+}
+.navlist {
+  display: flex;
+}
+.navlist li {
+  position: relative;
+}
+.navlist a {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+}
+.navlist a:hover {
+  color: var(--main-color);
+}
+.navlist a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  left: 0;
+  bottom: -4px;
+  transition: ease 0.4s;
+}
+.navlist a:hover:after {
+  width: 100%;
+}
+#menu-icon {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.h-btn a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 26px;
+  border: 2px solid transparent;
+  transition: ease 0.4s;
+}
+    .back-sec{
+  display: flex;
+  flex-direction: column;
+}
+.back-second-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid var(--main2-color);
+  border-radius: 10px;
+  color: #fff;
+  line-height: 50px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+.back-second-div a{
+  color: #00cc44;
+  text-decoration: underline;
+}
+.back-second-div a:hover{
+  color: #00882d;
+  transition: all ease 0.4s;
+}
+.back-second-div h1{
+    color: var(--other-color);
+}
+.back-first-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--other-color);
+  line-height: 55px;
+  margin: 20px;
+}
+.back-first-div h2{
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.back-h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--main2-color);
+  background: linear-gradient(90deg, #3ce7d0, #23a6d5, #23d5ab);
+  position: relative;
+  border-radius: 20px;
+  font-family: "Merriweather", serif;
+  margin-bottom: 50px;
+}
+@media (max-width: 807px){
+  .back-second-div{
+    line-height: 40px;
+  }
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+.copyright {
+  background: var(--bg-color);
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--other-color);
+}
+.icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.icon a:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 807px){
+  .back-second-div{
+    line-height: 40px;
+  }
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+@media (max-width: 1170px) {
+  header {
+    padding: 18px 2%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 2%;
+    transition: 0.3s;
+  }
+  :root {
+    --big-font: 4.7rem;
+    --h2-font: 2.5rem;
+  }
+  .home-text h4 {
+    font-size: 1.2rem;
+  }
+  .count span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1026px) {
+  header {
+    padding: 14px 2%;
+  }
+  .home {
+    height: 85vh;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-color);
+    text-align: center;
+    transition: all 0.35s ease;
+  }
+  .navlist a {
+    display: block;
+    padding: 0rem;
+    margin: 1.2rem;
+    border: 2px solid aquamarine;
+    border-radius: 10px;
+  }
+  .navlist a:hover {
+    background: var(--text-color);
+    color: var(--secound-color);
+    border: none;
+  }
+  .navlist a::after {
+    display: none;
+  }
+  .navlist.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 609px) {
+  .contact {
+    text-align: center;
+  }
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+  .copyright {
+    justify-content: center;
+    text-align: center;
+  }
+  .copyright p {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 580px) {
+  :root {
+    --big-font: 3.5rem;
+    --h2-font: 1.9rem;
+    --p-font: 0.9rem;
+  }
+}
+
+@media (max-width: 580px) {
+  section {
+    padding: 90px 4%;
+  }
+  header {
+    padding: 14px 4%;
+  }
+  :root {
+    --big-font: 3.2rem;
+    --h2-font: 1.8rem;
+    --p-font: 0.9rem;
+  }
+}
+
+
+@media (max-width: 290px) {
+  :root {
+    --big-font: 1.9rem;
+    --h2-font: 1rem;
+    --p-font: 0.9rem;
+  }
+}
+
+   </style>
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+rel="stylesheet"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="bx bx-home"></i>
+    </div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    
+    <li>@Bargand</li>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+  <!-- agronomy section -->
+    <section class="back-sec">
+      <div class="back-second-div">
+        <ul>
+          <h1>Plant Science</h1>
+          <li><a href="SeedScience.html">&#x2688; Seed Science & Techonology</a></li>
+          <li><a href="#PlantBreeding">&#x2688; Plant Breeding & Genetics</a></li>
+          <li><a href="#PlantPathology">&#x2688; Plant Pathology</a></li>
+          <li><a href="#AgMicrobiology">&#x2688; Agriculture Microbiology</a></li>
+        </ul>
+      </div>
+      <div class="back-first-div" id="SeedScience">
+        <div><h1 class="back-h1">Plant Science</h1></div>
+        <br>
+        <h2>Concept Of Plant Science</h2>
+        <p>
+        <strong>  Plant science </strong> is the study of how plants are used to produce food, alter environments, restore damaged landscapes, improve human health and well-being, improve community environments, and provide recreational and practical benefits to the public. Plant science is essential to maintaining the world around us. Plant scientists have been improving the quality of life for people around the world for generations. <br> The career paths for Plant Science majors are constantly growing. Our students have a wide variety of interests and the ability to tailor your major to your specific interests allows you to pursue your goals either broadly or more purposefully.
+        </p>
+        <br>
+        <h2>Importance</h2>
+        <p>Plant science is the study of how plants are used to produce food, alter environments, restore damaged landscapes, improve human health and well-being, improve community environments, and provide recreational and practical benefits to the public. Plant science is essential to maintaining the world around us.</p>
+        <br>
+        <h2>Father Of Plant Science</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Teofrasto_Orto_botanico_detail.jpg/220px-Teofrasto_Orto_botanico_detail.jpg" alt="">
+        <p><b>&#9830; Theophrastus. (c. 371-286 BC)	&#9830;</b></p>
+        <br />
+        <p><b>&#9827; Botany, also called plant science(s), plant biology or phytology, is the science of plant life and a branch of biology.</b></p>
+        <br>
+        <h2>Definition</h2>
+        <p>
+          <strong>&#10004; Plant Sciences is the study of plant growth, reproduction, evolution, and adaptation, as well as the use of plants for food, fiber, and ornamental purposes</strong>
+        </p>
+        <br>
+        <h2>Why We Study Plant Science</h2>
+        <p>
+          Good reasons remain to study the basic life processes of plants. Research on plants enriches our intellectual life and adds to our knowledge about other life processes. The results of research on plant systems also can teach us how to approach problems in agriculture, health, and the environment.
+        </p>
+        <h2>What Is The Difference Between Plant Science And Botany?</h2>
+        <p>
+          <strong>&#10004; Plant sciences focus more on the biology and chemistry behind plants. A major aspect of plant science is to be able to use and grow plants for agricultural or horticultural purposes. </strong><br><strong>&#10004; Botany : The study of plants and plant life, including: flowering plants, algae, conifers fungi, ferns, mosses, lichens, etc.</strong> 
+        </p>
+      </div>
+    </section>
+
+    </main>
+    <footer>
+
+      <!-- copyright-->
+      <div class="copyright">
+        <p>&copy; 2023 All Rights | Design & Developed By Debargha Nandi</p>
+        <div class="icon">
+          <a href="https://www.facebook.com/debargha.nandi.1"><i class="bx bxl-facebook"></i></a>
+          <a href="https://wa.me/message/VYDMDJDCCR5RL1"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/debargha-nandi-76a311201/"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </footer>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+      <!--link to js-->
+  
+      <script src="script.js"></script>
+    </body>
+  </html>
+  

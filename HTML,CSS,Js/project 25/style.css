@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html , body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+#main-left{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+}
+#lnav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+}
+#lnav a{
+    margin-right: 20px;
+}
+#lnav i{
+    font-size: 20px;
+    cursor: pointer;
+}
+#lnav #lnavr a{
+    font-family: poppins;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+#lnavr .lnavr-about{
+    border-bottom: solid 2px #000;
+}
+#lnav #lnavr a:hover{
+    border-bottom: solid 2px #000;
+}
+#lnav #lnavr i{
+    font-size: 20px;
+    justify-content: center;
+    color: blue;
+    cursor: pointer;
+}
+#lcontainer{
+    font-family: poppins;
+    align-items: center;
+    position: relative;
+    padding: 150px 65px;
+}
+#lcontainer h1{
+    font-size: 60px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+#lcontainer p{
+    font-size: 15px;
+    line-height: 25px;
+    color: #808080;
+    padding-bottom: 30px;
+}
+#lcontainer a{
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: solid 2px #000;
+    color: #000;
+}
+#main-right{
+    width: 60%;
+    height: 100%;
+    /* background-color: blue; */
+    /* display: flex; */
+    background-image: url(https://images.pexels.com/photos/46174/strawberries-berries-fruit-freshness-46174.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+#rtop{
+    width: 100%;
+    height: 50%;
+    background-color: aqua;
+    display: flex;
+}
+#rtopl{
+    width: 50%;
+    height: 100%;
+    /* background-color: brown; */
+    background-image: url(https://images.pexels.com/photos/2940256/pexels-photo-2940256.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+#rtopr{
+    width: 50%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    background-image: url(https://images.pexels.com/photos/5946075/pexels-photo-5946075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: bottom;
+    cursor: pointer;
+}
+@media (max-width: 684px){
+    #main{
+        flex-direction: column;
+    }
+    #main #main-left{
+        width: 100%;
+    }
+    #main #main-right{
+        width: 100%;
+        height: 50%;
+    }
+}

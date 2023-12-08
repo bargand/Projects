@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 50px;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 60px;
+  position: relative;
+  display: inline;
+}
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10px;
+  width: 0%;
+  background: #000;
+  transition: all ease 0.5s;
+}
+h1:hover::after {
+  width: 100%;
+}

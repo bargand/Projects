@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+    <title>Bargand/seed technology</title>
+   <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+:root {
+  --bg-color: #ffffff;
+  --secound-bg-color: #f9f9f9;
+  --text-color: #fff;
+  --secound-color: #161616;
+  --main2-color: #ef0454;
+  --main-color: #00cc44;
+  --other-color: #6a6a6a;
+  --big-font: 5.7rem;
+  --h2-font: 3.8rem;
+  --p-font: 1rem;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 10px 6%;
+}
+.logo i {
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+span {
+  color: var(--main-color);
+}
+.navlist {
+  display: flex;
+}
+.navlist li {
+  position: relative;
+}
+.navlist a {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+}
+.navlist a:hover {
+  color: var(--main-color);
+}
+.navlist a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  left: 0;
+  bottom: -4px;
+  transition: ease 0.4s;
+}
+.navlist a:hover:after {
+  width: 100%;
+}
+#menu-icon {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.h-btn a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 26px;
+  border: 2px solid transparent;
+  transition: ease 0.4s;
+}
+    .back-sec{
+  display: flex;
+  flex-direction: column;
+}
+.back-first-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--other-color);
+  line-height: 40px;
+  margin: 20px;
+  padding-top: 100px;
+}
+.back-first-div h2{
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.back-h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--main2-color);
+  background: linear-gradient(90deg, #3ce7d0, #23a6d5, #23d5ab);
+  position: relative;
+  border-radius: 20px;
+  font-family: "Merriweather", serif;
+  margin-bottom: 50px;
+}
+@media (max-width: 807px){
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+.copyright {
+  background: var(--bg-color);
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--other-color);
+}
+.icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.icon a:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 807px){
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+@media (max-width: 1170px) {
+  header {
+    padding: 18px 2%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 2%;
+    transition: 0.3s;
+  }
+  :root {
+    --big-font: 4.7rem;
+    --h2-font: 2.5rem;
+  }
+  .home-text h4 {
+    font-size: 1.2rem;
+  }
+  .count span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1026px) {
+  header {
+    padding: 14px 2%;
+  }
+  .home {
+    height: 85vh;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-color);
+    text-align: center;
+    transition: all 0.35s ease;
+  }
+  .navlist a {
+    display: block;
+    padding: 0rem;
+    margin: 1.2rem;
+    border: 2px solid aquamarine;
+    border-radius: 10px;
+  }
+  .navlist a:hover {
+    background: var(--text-color);
+    color: var(--secound-color);
+    border: none;
+  }
+  .navlist a::after {
+    display: none;
+  }
+  .navlist.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 609px) {
+  .contact {
+    text-align: center;
+  }
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+  .copyright {
+    justify-content: center;
+    text-align: center;
+  }
+  .copyright p {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 580px) {
+  :root {
+    --big-font: 3.5rem;
+    --h2-font: 1.9rem;
+    --p-font: 0.9rem;
+  }
+}
+
+@media (max-width: 580px) {
+  section {
+    padding: 90px 4%;
+  }
+  header {
+    padding: 14px 4%;
+  }
+  :root {
+    --big-font: 3.2rem;
+    --h2-font: 1.8rem;
+    --p-font: 0.9rem;
+  }
+}
+
+
+@media (max-width: 290px) {
+  :root {
+    --big-font: 1.9rem;
+    --h2-font: 1rem;
+    --p-font: 0.9rem;
+  }
+}
+
+   </style>
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+rel="stylesheet"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="bx bx-home"></i>
+    </div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    
+    <li>@Bargand</li>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+  <!-- agronomy section -->
+    <section class="back-sec">
+      <div class="back-first-div">
+        <div><h1 class="back-h1">Seed Science & Technology</h1></div>
+        <br>
+        <h2>Concept Of Seed Science</h2>
+        <p>
+        <strong>&#9827;  Seed Technology </strong> is the method through which the genetic and physical charactistics of seed could be improved <br> &#9827; Variety development , evaluation Seed Processing , Seed Certification , Seed Testing , Seed Biology Seed Storage , Seed Entomology , Seed Pathology and Seed Marketing. <strong>The Seed is the final product of sexual reproduction.mature seed may be non albuminus or albuminus.</strong>
+        </p>
+        <br>
+        <h2>Importance</h2>
+        <p>Many areas of seed technology are important for optimal agricultural yield, including the release and evaluation of superior crop plant varieties, seed certification and quality control, seed testing and storage, marketing, distribution, seed production and processing, and seed research.</p>
+        <br>
+        <h2>Importance Of Seed Technology In Agriculture</h2>
+        <p>Seeds are of immense biological and economic importance. They contain high protein, starch and oil reserves that help in the early stages of growth and development in a plant. Seed is the most important things in our agriculture sector. <strong>Because the plant that sprouts from the soil comes from the seed.</strong>
+        <br> <strong>1) Higher Yield</strong><br><strong>2) Lower Cost</strong><br><strong>3) More Income</strong><br><strong>4) Reliability</strong><br><strong>5) Correct Informatin</strong></p>
+        <br>
+        <h2>Father Of Seed Science</h2>
+        <img src="https://apsaseed.org/wp-content/uploads/2017/08/Late-Hon-Chairman-of-Mahyco-1024x683.jpg" width="200px" alt="">
+        <p><b>&#9830; Dr Badrinarayan Barwale	&#9830;</b></p>
+        <br>
+        <h2>Definition</h2>
+        <img src="https://cdn.britannica.com/41/62941-050-C9680411/pollen-pollination-flowering-plants-anther-transfer-Reproduction.jpg" width="500px" alt="">
+        <p>
+          <strong>&#10004; Seed is defined as  fertilized matured ovule, consisting of an embryonic plant together with a store of food , all sorrounded by a protected coat</strong><br>
+          <b><u>&#10004; AFTER FERTILIZED COMES SEED</u></b>
+        </p>
+        <br>
+        <h2>Types Of Seed</h2>
+        <p>
+            <strong>&#10004; A Seed Is Primarily Of 2 Types :</strong>
+            <br> &#10102; Monocotyledonous Seed. <br> &#10103; Dicotyledonous Seed. 
+            <br>
+            <strong>&#10004; On The Basis Of Method There Are 4 Types Of Seed :</strong>
+            <br>
+            &#10102; On The Basis Of Reproduction. <br> &#10103; On The Basis Of Storability. <br> &#10104; On The Basis Of Longevity. <br> &#10105; On The Basis Of Generation.
+        </p>
+        <h2>On The Basis Of Reproduction Seed Is 2 Types</h2>
+        <p>
+            &#10102; Sexually Production Seed <br> &#10103; Asexually Production Seed
+        </p>
+        <h2>On The Basis Of Storability Seed Is 3 Types</h2>
+        <p>&#10102; Orthodox Seed(5%),temp &#8595;<br> &#10103; Intermediate Seed(12% - 15%) <br> &#10104; Recalcitrant Seed(12% - 13%),temp &#8593;</p> <br>
+        <h2>On The Basis Of Longevity Seed Is 3 Types</h2>
+        <p>&#10102; Microbiotic Seed (3 years) <br> &#10103; Mesobiotic Seed (3 years to 15 years) <br> &#10104; Macrobiotic Seed (15 years to 100 years)</p>
+        <br>
+        <h2>On The Basis Of Generation Seed Is 5 Types</h2>
+        <p>&#10102; Breeder Seed (100% pure),Golden Yellow Tag <br> &#10103; Foundation Seed (99.5% pure),Gray Tag <br> &#10104; Registered Seed (>80% pure),Purple Tag <br> &#10105; Certified Seed (99% pure),Blue Tag <br> &#10106; Nucleus Seed (100% pure),White Tag</p>
+        <h2>Characteristics Of Good Quality Seed</h2>
+        <p>
+            &#10102; Higher Genetic Purity <br> &#10103; Possession Of Good Shape , Size and Color ,according to specification of variety <br> &#10104; Higher physical soundness and width <br> &#10105; Higher germination percentage <br> &#10106; Higher physical vigour <br> &#10107; Wider adaptability to climatic condition <br> &#10108; Higher yield etc.
+        </p>
+        <h2>What Is Seed Quality?</h2>
+        <p><strong>By good Quality , We mean the seed of an improved variety which is genetically and physically pure , shows high germination and vigour , has optimum moisture content and is of good health</strong></p>
+        <h2>Characteristics Of A Good Seed</h2>
+        <p>&#10102; Seed should be >99% Genetically pure.<br> &#10103; Seed should be 98% Physically pure.<br> &#10104; Moisture of seed should be 8-12%.<br> &#10105; germination percentage should be more than 60% in according to crop.<br> &#10106; Real value of seed should be not be less than 75%.<br> &#10107; The variety should have potentially of given maximum yield.<br> &#10108; Seed should be viable.<br> &#10109; Seed should be free from insect-pest and disease(Healthy Seed).<br> &#10110; Seed should be matured.</p>
+        <h2>What Is Core Seed?</h2>
+        <p>Weight of 100 seeds is called <strong>Core Seed or Seed Index.</strong></p>
+        <h2>What IS Small Seed?</h2>
+        <p>Weight of 1000 seed is called <strong>Small Seed or Test Weight.</strong></p>
+        <h2>Problems Of Seed Industry</h2>
+        <p>&#10102; Faulty Planning And red-tapism.<br> &#10103; Lack Of Co-ordination In The activities Of Various Seed Agencies.<br> &#10104; Lack Of Trained And Experienced Workers.<br> &#10105; Lack Of Processing Mechines And Problem Of Repair And Spare Parts.<br> &#10106; Problem Of Marketing And Distribution.<br> &#10107; Small Production Unit.<br> &#10108; Problmes Of Patenting And Terminator Seed.</p>
+
+
+        <h2>Chemical Composition of Seeds</h2>
+        <img src="https://www.researchgate.net/profile/Palmei-Gaibimei/publication/327751786/figure/tbl1/AS:672595364024325@1537370639792/Chemical-composition-of-whole-pumpkin-seed-and-kernel.png" width="400px" alt="">
+        <p>The seed is a living organic matter. It contains several organic and inorganic constituents, such as water, carbohydrate, fat, protein, mineral matter, vitamins and hormones, etc., in different quantities: <br>
+          <strong>(1) Water-</strong>At different stages of the seed, different amounts of moisture content are present. In developing seeds, 35-80 per cent moisture is present which is reduced to 18-35 per cent at the time of crop maturity and in processed seeds 10-13 per cent moisture content is retained. <br>
+          <strong>(2) Carbohydrate-</strong>Carbohydrate is the major substance found in seeds of crop plants. The seeds of cereals are very rich in carbohydrate. Starch is the major form of carbohydrate stored in seeds. Amount of starch present in cereals is 65-75 per cent, while in legumes 60-65 per cent starch is present. In cereals, it is found in endosperm and in legumes it is present in cotyledons. Starch grains are composed of amylose and amylopectin compounds. The relative amounts of these compounds present in starch, determine its quality. Starch is the major component of human food and it is the major source of energy. Another form of carobohydrate found in seeds, next to starch, is hemicellulose, but in agricultural seeds it is generally not present. Apart from starch
+          and hemicellulose, glucose, fructose, sucrose, raffinose and stachyose, etc., are also found in the seeds, in smaller quantities. <br>
+          <strong>(3) Fats and oils-</strong>In oil seeds, the energy is preserved in the form of fat which is found in endosperm or cotyledons in the form of fat globules which are glycerides of fatty acids. Most of the fatty acids present in the seeds are unsaturated. Oleic, linoleic and linolenic acids are mainly found. Acetic, butyric, palmitic, stearic acids, etc. are found in smaller quantities. Besides these, phospholipids are also present. <br>
+          <strong>(4) Protein-</strong>Proteins are found in sufficient quantities (20-40 per cent) in legumes and some oil seeds (e.g., cotton), but in smaller quantities in cereals. Proteins are also the source of energy. Proteins are made of different amino acids. Mainly glycine, lycine, phenyl-alanine, tryptophan, valine, leucine, isoleucine, methionine, cysteine are present. Their amounts and sequence present in a protein, determine its quality. Besides endosperm and cotyledons, the proteins are present in seed coats also in sufficient quantities. Enzymes and nucleoproteins are some examples of active proteins. The amino acids, deficient in vegetable protein are termed as essential amino acids, such as lysine, tryptophan, methionine. So, the plant breeders are always engaged in increasing their quantities. <br>
+          <strong>(5) Minerals, vitamins, etc.-</strong>Some minerals, like potassium, phosphorous, cal- cium, magnecium, sodium, iron, sulphur, zinc, copper, mangenese, boron, silicon and chlorine, etc., are found in smaller quantities in seeds, in compound forms. Vitamins, hormones and certain pigments, e.g., caroteins, anthocyanins, etc. are also found in very small quantities. In certain seeds, some special compounds, such as gossypol pig- ment (cotton) tannin pigment (Cajanus), caffeine (coffee), nicotine (tobacco), are also found. <br>Thus, the knowledge of the chemical composition of seeds is essential which is affected by genetic and environmental factors and the plant breeders always try to make improvements in the chemical composition of the seeds.
+        </p>
+        <h2>Physiology of Seed Development, Seed Storage, Seed Germination, Seed Dormancy and Vigour</h2>
+        <h3>&#10102; Physiology of Seed Development</h3>
+        <p>Various biochemical changes take place in plants during seed development: <br>
+          <strong>(1) Moisture content-</strong>At the time of fertilization, amount of moisture present in the ovule is above 80 per cent, which increases for some days but soon starts decreasing till an equilibrium with the atmospheric moisture is established, which is 14-20 per cent in most of the crops. <br>
+          <strong>(2) Dry matter content-</strong>After fertilization, the developing seed begins to increase in dry weight and the seed possesses its maximum dry weight at physiological maturity. The translocation of soluble substances is stopped at this stage and starch, fats, nucleic acids, hormones and minerals are synthesized in the seeds. <br>
+          <strong>(3) Rate of respiration-</strong>As the moisture content in the seeds decreases there is also decrease in the rate of respiration. <br>
+          <strong>(4) Germinability-</strong>As the seed develops and attains maturity there is development of germination capability and at maturity, germination capacity and vigour are the highest.
+        </p>
+        <h3>&#10103; Physiology Of Seed Storage</h3>
+        <p>
+          <strong>(1) Physical changes-</strong>Various physical changes occur in the seeds during storage, such as, change in colour, structure, mechanical strength, moisture content and loss of dry matter content, etc. As a result, the seed looks dirty and its market price is reduced. <br>
+          <strong>(2) Chemical changes-</strong>The chemical changes alter the chemical composition of the seeds, which affect the food materials and ultimately the germinability of the seeds. <br>
+          <strong>(3) Change in respiration-</strong>The main aim of the scientific seed storage is to keep the respiration rate minimum. If the storage conditions are not satisfactory, the rate of respiration is increased, so that water, heat and carbon-di-oxide evolution takes place, and if this water content and the heat is not removed, the seed deterioration starts. Various factors affect the rate of respiration in storage:
+          <b>(a) Moisture-</b> The moisture content of the seeds is the most important factor affecting the quality of the seeds in storage. By lowering the moisture content of the seeds, they may be safely stored for longer periods. It means moisture content of the seeds has negative correlation with the storability of the seeds. If the moisture content in the seeds is more, not only the respiration rate is increased, they become more susceptible to insects-pests and diseases and ultimately the quality of the seed isdeteriorated. <b>(b) Temperature-</b> At higher temperatures, the respiration in seeds is increased and insects-pests and micro-organisms become more active. Low temperature is the second most important factor in good storage of the seeds after the moisture content.
+          <b>(c) Oxygen/Carbon-di-oxide ratio-</b> During respiration the seeds utilize oxygen and water and heat are evolved, as a result the seeds start decaying and ultimately the germination capacity is reduced. It means the supply of oxygen, affects the rate of respiration in seeds, thereby, affecting the quality of the seeds. In open storage, unlimited oxygen supply is available, whereas in airtight storage, the rate of respiration is kept minimum. So, in airtight storage, the quality of the seeds can be maintained for longer periods in comparison to open storage. The rate of respiration is reduced in storage, if CO2 concentration is more than 12 per cent.
+          <b>(d) Seed injury-</b> Under similar storage conditions, the mechanically injured seed deteriorates more rapidly in comparison to un-injured seeds as the penetration of oxygen and moisture becomes easy from the exposed tissues and the infestation of insects-pests and pathogans is also increased. So, for, safe storage of the seeds, the seed should not have any mechanical injury. <br>
+          It is clear from the above description that there is a significant relationship between moisture content of the seeds and the temperature in storage with the seed quality. So, to maintain the germinability and vigour of the seeds, it is essential to keep the moisture content of the seeds and the temperature in storage as low as possible.
+        </p>
+        <h3>&#10104; Physiology of Seed Germination</h3>
+        <p>It is clear from the structure of the seed that seed has a dormant plant in it, in the form of embryo. When the seed gets optimum moisture, temperature and air (oxygen), its embryo becomes active and resumes growth and as a result a new plant (seedling) comes out rupturing the seed coat. So, <strong>resumption of active growth on the part of the embryo is known as germination.</strong><br>
+        <strong> Changes during germination-</strong> When the seed gets favourable conditions for germination, then first of all, it imbibes moisture so that the cells of the seed become turgid, thereby increasing the volume of the seed and the embryo becomes active and starts its growth, the seed coat becomes weak due to moisture and fails to accomodate the growing tissues in it and ruptures and the emergence of growing embryo takes place. In the germination process, due to increased moisture content, the enzymes become active, mitochondria (seat of respiration) increase in number, so that the rate of respiration is increased in which food materials are broken down to produce energy which is utilized by the growing embryo. Various chemical analyses conduced at different stages of germination, showed decrease in the amounts of starch, fats and proteins. The fats are mostly converted in soluble carbohydrates which are utilized in respiration and formation of cell walls. In germinated seeds, the proteins are found in the form of amino acids and asparazine, which indicates that protein is not used in respiration but it is utilized in the synthesis of carbon and nitrogenous compounds, essential for the growth of the embryo. <br><strong>Types of germination-</strong>There are two types of germination epigeal and hypogeal germination. In epigeal germination, the portion of the axis, just below the cotyledons (hypocotyl), grows rapidly and as a result cotyledons come out of the soil, whereas in hypogeal germination, growth is more rapid in the portion above the cotyledons (epicotyl). <br>
+      <strong>Factors affecting germination-</strong>The following environmental factors are necessary for seed germination : <br>
+      <strong>(1) Moisture-</strong>Dry, stored seeds contain 10-15 per cent moisture, whereas 70-75 per cent moisture content is required for protoplasmic activity. Moisture also helps in gaseous exchange, thereby helping in respiration. Moisture is also required for the activity of enzymes responsible for the conversion of food material present in the seeds into simpler, water soluble compounds, which are translocated to growing plumule and Moisture weakens the seed coat, that ruptures and gives way to radicle and plumule to come out. <br>
+      <strong>(2) Temperature-</strong>An optimum temperature is required for germination which may different for different seeds. An optimum temperature for most of the seeds, is 20-35°C. <br>
+      <strong>(3) Oxygen-</strong>The germinating seeds respire more rapidly to supply energy for the growing embryo, produced by the degradation of the food reserves and for respira- tion, oxygen is requried. <br>
+      <strong>(4) Light-</strong>Most of the seeds do not require light for germination. But, some, seeds are unable to germinate without light, e.g., tomato, tobacco, lettuce, etc., some seeds fail to germinate in the presence of light, e.g., onion.
+    </p>
+    <h3>&#10105; Physiology of Seed Dormancy</h3>
+    <p>In some seeds, germination is obstructed for sometime after attaining maturity, even if optimum conditions-moisture, temperature and oxygen, are available to them. In nature, dormancy is helpful for the seeds to survive under adverse climatic conditions. (The dormancy in seeds has been discussed in detail in the chapter re- garding seed treatment).</p>
+    <h3>&#10106; Physiology of Seed Vigour</h3>
+    <p>Seed vigour is the measure of potentiality for rapid and uniform emergence and development of normal seedlings under a wide range of field conditions. By estimating the vigour of the seeds, water holding capacity and storability of the seeds may be known. By sowing the seeds with uniform vigour, uniform plant stand may be obtained in the field. <br><b>Factors affecting seed vigour</b><br>
+    <strong>(1) Genetic constitution-</strong>The seed vigour is determined by the genetic constitution of the seed. So, different varieties differ in their seed vigour. <br>
+    <strong>(2) Age of the seed-</strong>As a principle, at complete maturity, vigour of the seed is the highest which declines as the age of the seed increases. <br>
+    <strong>(3) Mechanical injury-</strong>During harvesting, threshing and processing operations, the seeds are mechanically injured which result in the reduction of the seed vigour. Such seeds are more susceptible to insects-pests and diseases and their storability is reduced. <br> 
+    <strong>(4) Infestation with diseases and pests-</strong>If the seeds are infested with diseases and pests, their vigour is decreased and the growth of the seedling is also abnormal. <br>
+    <strong>(5) Seed treatment-</strong>By treating the seeds with fungicides, the vigour of the seeds is increased and resistance against pathogens is developed. <br>
+    <strong>(6) Time of harvesting-</strong>Seed vigour is at its peak at the time of maturity. So, delayed harvesting and atmospheric conditions prevailing after harvesting, affect the vigour of the seeds.
+  </p>
+  <h2>What Is Tisue Culture?</h2>
+  <img src="https://www.researchgate.net/profile/Aruna-Kilaru/publication/329060646/figure/fig3/AS:695008957067269@1542714456691/Representative-images-of-stages-in-tissue-culture-from-seeds-to-plants-Inoculated-seeds.jpg" width="400px" alt="tissue culture photo">
+  <p><strong>&#10004; Introduction</strong><br>
+    Plant tissue culture technology is being widely used for large scale plant multiplication. Apart from their use as a tool of research, plant tissue culture techniques have in recent years, become of major industrial importance in the area of plant propagation, disease elimination, plant improvement and production of secondary metabolites.Small pieces of tissue (named explants) can be used to produce hundreds and thousands of plants in a continuous process. A single explant can be multiplied into several thousand plants in relatively short time period and space under controlled conditions, irrespective of the season and weather on a year round basis. Endangered, threatened and rare species have successfully been grown and conserved by micropropagation because of high coefficient of multiplication and small demands on number of initial plants and space. <br>
+    <strong>&#10004; Definition</strong><br>
+    Tissue culture is the cultivation of plant organs,tissue or cells in test tubes on artificial media(in vitro). <br>
+    <strong>&#10004; Types Of Tissue Culture</strong><br>
+    Following are the different types of tissue culture techniques: <br>
+    <b>&#10102; Seed Culture</b><br>
+    In this culture, the explants are obtained from an in-vitro derived plant and introduced into a laboratory where they proliferate. The explant should be sterilized to prevent it from tissue damage. <br>
+    <b>&#10103; Embryo Culture</b><br>
+    This involves the in-vitro development of an embryo. For this, an embryo is isolated from a living organism. Both, a mature or an immature embryo can be used in the process. Mature embryos can be obtained from ripe seeds. The immature embryos are obtained from the seeds that failed to germinate. The ovule, seed or fruit is already sterilized, therefore, it does not need to be sterilized again. <br>
+    <b>&#10104; Callus Culture</b><br>
+    A callus is an unorganized, dividing mass of cells. When the explants are cultured in a proper medium, the callus is obtained. The growth of callus is followed by organ differentiation. The culture is grown on a gel-like medium composed of agar and specific nutrients required for the growth of the cells. <br>
+    <b>&#10105; Organ Culture</b><br>
+    In this, any organ of the plant such as shoot, leaf, can be used as an explant. A number of methods can be used for the organ culture, such as plasma clot method, raft method, grid method, and agar gel method. This method is used to preserve the structure and functions of an organism. <br>
+    <b>&#10106; Protoplast Culture</b><br>
+    It is a cell without a cell wall. A protoplast can be cultured using the hanging-drop method, or micro-culture chambers. In protoplast culture, a number of phases can be observed: development of cell wall, cell division, regeneration of a whole plant. <br>
+    <strong>&#10004; Advantages Of Tissue Culture</strong><br>  
+    1) The production of new varieties in the market place speeds up. <br>
+    2) The plantlets are obtained in a very short time with a small amount of plant tissue. <br>
+    3) The plants can be grown throughout the year, irrespective of the season. <br>
+    4) A large space is not required to grow plants by tissue culture technique. <br>
+    5) This technique is being used for the production of ornamental plants such as dahlia, chrysanthemum, orchids<br>
+    6) The new plants produced are disease-free, etc  <br>
+  </p>
+  <h2>What Is Synthetic Seed?</h2>
+  <img src="https://www.researchgate.net/profile/Vijay-Kumar-286/publication/259637732/figure/fig3/AS:613936772702244@1523385341725/Synthetic-seed-production-germination-and-field-transfer-of-synthetic-seeds-of-S.png" width="400px" alt="">
+  <p>Synthetic seeds are defined as artificially encapsulated somatic embryos , shoot buds , cell aggregates , or any other tissue that can be used for sowing as a seed and that possess the ability to convart into a plant under in vitro or ex vitro conditions and that retain this potencial also after storage <br><strong>They are also called "synseeds" or "artificial seed".</strong> <br>
+  <strong>The First Synthetic Seed Was Produced By KITTO and JANICK In 1982 In Carrot.</strong>
+  <h3>&#10004; Types Of Synthetic Seed</h3>
+  <Strong>(1) DESICCATED SYNTHETIC SEED - </Strong>Desiccated synthetic seed are produce naked or polyoxyethlene glycol encaplulated somatic embryos. This type of synthetic seed is produced in desiccation tolerance species plant. <br>
+  <strong>(2) HYDRATED SYNTHETIC SEED - </strong>Hydrate synthetic seeds are produced by encapsulating the somatic embryos in hydrogels like sodium alginate , potassium alginate carrageenen , sodium pectate or sodium alginate with gelatine.
+  <h3>&#10004; Parts of synthetic seeds</h3>
+  <strong>(a) Plant propagule -</strong><br>
+  (somatic embryo or shoot bud) somatic embryos are bipolar structures with both apical and basal meristematic regions, which are capable of forming shoot and root, respectively. 
+  <br>
+  <strong>(b) Matrix -</strong>is a gelling material encapsulating plant propagules which incorporate nutrients, biofertlizers, pesticides, nitrogen - fixing bacteria, antibiotics or other essential additives. <br>
+  <strong>(c) Seed shell-</strong>these are the artificial seed coats prepared with complex mixture of alginate- gelatin which was used to develop the coat system for encapsulation. The concept of artificial seed technology has been applied, successfully in large numbers of plants.
+  </p> <br>
+  <h2>Different Between Seed And Grain: </h2><br>
+  <table border="4">
+    <thead>
+      <tr>
+        <th>SEED</th>
+        <th>GRAIN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>(1) It should be a viable and vigorous one.</td>
+        <td>(1) Need not be a viable one.</td>
+      </tr>
+      <tr>
+        <td>(2) It should be physically and genetacelly pure.</td>
+        <td>(2) It should not be physically and genetacelly pure.</td>
+      </tr>
+      <tr>
+        <td>(3) Should satisfy minimum seed certification standard.</td>
+        <td>(3) Not such any requirment.</td>
+      </tr>
+      <tr>
+        <td>(4) It can be tested in pesticides fungicides to protect seed.</td>
+        <td>(4) Not such any requirment.</td>
+      </tr>
+      <tr>
+        <td>(5) Respiration rate at low level during storage.</td>
+        <td>(5) No such specification.</td>
+      </tr>
+      <tr>
+        <td>(6) Seed can be converted into grain.</td>
+        <td>(6) Grain can no converted into seed.</td>
+      </tr>
+      <tr>
+        <td>(7) Endosperm is used as food</td>
+        <td>(7) Fruit part is used as food</td>
+      </tr>
+      <tr>
+        <td>(8) A seed is an embryonic plant covered in a seed coat that often contains some food.</td>
+        <td>(8) A grain is a small edible fruit harvested from grassy crops that is usually hard on the outside.</td>
+      </tr>
+      <tr>
+        <td>Ex: pumpkin seeds, sunflower seeds etc.</td>
+        <td>Ex: Rice,wheat, barley, oats.</td>
+      </tr>
+    </tbody>
+  </table>
+        <h2>-: What Does A Seed Do :- </h2>
+        <p>
+          # Carries of new technology. <br>
+          # A basic tool for secured food supply. <br>
+          # The principle means to secure crop yield in less favourable production areas. <br>
+          # A midium for rapid rehabilitation of agricultural in cases of natural disaster.
+        </p>
+        <br>
+        <h2>What Is Seed Multiplication Ratio(SMR)?</h2>
+        <p><strong>It is the number of seeds to be produced from a single seed when it is sown and hervested.</strong></p>
+        <table border="4">
+          <thead>
+            <tr>
+              <th>CROP</th>
+              <th>MULTIPLICATION RATIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Wheat</td>
+              <td>1:20</td>
+            </tr>
+            <tr>
+              <td>Paddy</td>
+              <td>1:70 -- 1:80</td>
+            </tr>
+            <tr>
+              <td>Maize</td>
+              <td>1:80 -- 1:100</td>
+            </tr>
+            <tr>
+              <td>Bajra</td>
+              <td>1:200</td>
+            </tr>
+            <tr>
+              <td>Potato</td>
+              <td>1:4</td>
+            </tr>
+            <tr>
+              <td>Groundnut</td>
+              <td>1:8</td>
+            </tr>
+            <tr>
+              <td>Cotton</td>
+              <td>1:50</td>
+            </tr>
+            <tr>
+              <td>Mustard</td>
+              <td>1:100</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Seed Replacement Ratio(SRR)</h2>
+        <p><strong>Seed replacement ratio is the precentage od area sown out of area sown out of total area of crop planted in the season by using cirtified quality seed other than the farm saved seed</strong></p>
+        <img src="https://www.researchgate.net/profile/Venkatesh-P/publication/281586170/figure/tbl4/AS:391737081122820@1470408806480/Seed-replacement-rate-for-major-crops-in-India.png" width="600px" alt="">
+        <h2>Class Of Seed And Its Source</h2>
+        <p>(1) Foundation Class &#8594; Breeder Seed. <br>
+          (2) Certified Class &#8594; Foundation Seed.
+        </p>
+        <h2>What Is Epigial Seed Germination?</h2>
+        <p>Seed germination in which the cotyledons appear above the ground because of the growth of the hypocotyl.</p>
+        <h2>What Is Hypogial Seed Germination?</h2>
+        <p>growing or living below the surface of the ground. of a cotyledon</p>
+        <img src="https://lh3.ggpht.com/-7Z1wnufc3Ww/U-hP5NVWVwI/AAAAAAAAB0o/7KylB7Fh5sM/seed%252520germination%252520epigeal%252520and%252520hypogeal%25255B10%25255D.png?imgmax=800" width="600px" alt="">
+        <h2>Four Essantial Factors For Germination Of Seed</h2>
+        <p>(1) Capacity Of Seed To Germinate. <br>(2) Moisture. <br>(3) Temprature. <br>(4) Oxygen-supply.</p>
+        <h2>Factors Affecting The Emergence Of Seedlings Are-</h2>
+        <p>(1) Deep sowing or depth of soil cover over the seed. <br>
+          (2) Inadequate or excess soil moisture. <br>
+          (3) Poor aeration. <br>
+          (4) Higher soil compaction or impermeable layer of soil or outer. <br>
+          (5) Low temprature. <br>
+          (6) Rapid desiccation of soil. <br>
+          (7) Poor seed capacity. <br>
+          (8) Detrimental physical, chemical and biolgical soilconditions.
+        </p>
+        <h2>Viability Test :</h2>
+        <p>Seed's viability is defined as the capacity of the seed to remain capable germination for some specific period of time. When the seeds are dor- of mant or very slow in germination, the rapid test is extremely useful."
+          <h3>1. Respiration test:</h3>Respiration is an indication of life but such
+          tests are complicated.
+          <h3>2. Electrical conductance method:</h3>Seeds are soaked in distilled
+          water and electrical conductance of such water is tested. The increase in conductance is roughly proportional to the percentage of dead tissues. The increase in the conductivity is due to leaching of metabolites from dead seeds.
+          <h3>3. Potassium permaganate method:</h3>It is a qualitative test to find out whether seeds are viable.Increase in the proportion of dead seed,in- crease the discolouration of the solution since leaching from living cells is very less.
+          <h3>4. Indigocarmine method :</h3>Portion of dead seeds is determined by counting the number of stained.(C16HN2Na2O8S2).
+          <h3>5. Embryo Culture Method:</h3>Takes about 7-10 days,judged by counting the number of germinated embryos.
+          <h3>6. Tetrazolium Chloride Test:</h3> Known as Biological test. Seeds are
+          soaked in 0.5-2% solution of 2,3,5 triphenyl tetrazolium chloride. The viable or living seeds take bright colouration and the colouration becomes more intense in the embryo.It can be made quicker by cutting kernels, using vacuum and maintaining a temperature of 40-45°C, it takes only 4-5.
+          <h3>Grodex Test:</h3> Grodex is seed germination indicator and is a brand name of triphenyl tetrazolium bromide in power form.
+          <h2>Seed Moisture :</h2>Germination occurs when seed moisture is above 40-60%) The moisture determination in seeds by- <br>
+          <strong>
+            1.Traditional bite test. <br> 
+            2. Electrical moisture meters. <br>
+            3. Infra-red moisture meters <br>
+            14. Oil distillation method. <br>
+            5. The lab. Oven method. <br>
+            6. Karl Fisher reagent method.
+          </strong>
+        </p>
+      </div>
+    </section>
+
+    </main>
+    <footer>
+
+      <!-- copyright-->
+      <div class="copyright">
+        <p>&copy; 2023 All Rights | Design & Developed By Debargha Nandi</p>
+        <div class="icon">
+          <a href="https://www.facebook.com/debargha.nandi.1"><i class="bx bxl-facebook"></i></a>
+          <a href="https://wa.me/message/VYDMDJDCCR5RL1"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/debargha-nandi-76a311201/"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </footer>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+      <!--link to js-->
+  
+      <script src="script.js"></script>
+    </body>
+  </html>
+  

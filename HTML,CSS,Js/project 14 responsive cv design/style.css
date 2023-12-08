@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: ; */
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.container .left_side{
+    position: relative;
+    background: #006999;
+    /* background: linear-gradient(80deg, #1abba6, #1d92bd, #1bbd97); */
+    padding: 40px;
+}
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contactInfo ul li{
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #ff3c00;
+}
+.contactInfo ul li span{
+    color: #fff;
+    font-size: 300;
+}
+.contactInfo.education li{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5{
+    color: #ef0454;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container .right_side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}

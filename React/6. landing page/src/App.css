@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #000;
+}
+.main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.mainUpper {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.mainUpper a img {
+  width: 75px;
+  height: 40px;
+}
+.menuText {
+  font-size: 25px;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+.mainBottom {
+  width: 100%;
+  height: 87.2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.mainBottomImg {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+.mainBottomImg img {
+  width: 300px;
+  height: 300px;
+}
+.mainBottomText {
+  width: 90%;
+  height: 90%;
+  z-index: 999;
+}
+.mainBottomTextUpper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 30px 0px 30px;
+}
+.mainBottomTextUpper .mainBottomTextUpperLeft h1 {
+  font-size: 180px;
+  letter-spacing: 15px;
+  color: #fff;
+  font-weight: 800;
+}
+.mainBottomTextUpperRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainBottomTextUpper .mainBottomTextUpperRight i {
+  font-size: 200px;
+  color: #fff;
+  transform: rotate(-35deg);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.mainBottomTextLower {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 30px 0px 30px;
+}
+.mainBottomTextLowerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainBottomTextLower .mainBottomTextLowerLeft p {
+  font-size: 20px;
+  color: #fff;
+}
+.mainBottomTextLower .mainBottomTextLowerRight h1 {
+  font-size: 180px;
+  color: #fff;
+  font-weight: 800;
+}

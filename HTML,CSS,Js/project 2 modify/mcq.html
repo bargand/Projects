@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+    rel="stylesheet"
+  />
+    <title>Bargand/MCQ</title>
+   <style>
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+:root {
+  --bg-color: #ffffff;
+  --secound-bg-color: #f9f9f9;
+  --text-color: #fff;
+  --secound-color: #161616;
+  --main2-color: #ef0454;
+  --main-color: #00cc44;
+  --other-color: #6a6a6a;
+  --big-font: 5.7rem;
+  --h2-font: 3.8rem;
+  --p-font: 1rem;
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+header {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 10px 6%;
+}
+.logo i {
+  width: 55px;
+  height: 55px;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+span {
+  color: var(--main-color);
+}
+.navlist {
+  display: flex;
+}
+.navlist li {
+  position: relative;
+}
+.navlist a {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+}
+.navlist a:hover {
+  color: var(--main-color);
+}
+.navlist a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--main-color);
+  left: 0;
+  bottom: -4px;
+  transition: ease 0.4s;
+}
+.navlist a:hover:after {
+  width: 100%;
+}
+#menu-icon {
+  font-size: 26px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.h-btn a {
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 8px 26px;
+  border: 2px solid transparent;
+  transition: ease 0.4s;
+}
+    .back-sec{
+  display: flex;
+  flex-direction: column;
+}
+.mcqQuestion{
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+    margin-left: 40px;
+    color: var(--other-color);
+    font-weight: 900px;
+}
+.mcqQuestion h2{
+    color: var(--secound-color);
+}
+.mcqQuestion p{
+    color: #161616;
+}
+.mcqQuestion strong{
+    color: var(--main-color);
+}
+.back-first-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--other-color);
+  line-height: 55px;
+  margin-top: 120px;
+}
+.back-first-div h2{
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.back-h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--main2-color);
+  background: linear-gradient(90deg, #3ce7d0, #23a6d5, #23d5ab);
+  position: relative;
+  border-radius: 20px;
+  font-family: "Merriweather", serif;
+  margin-bottom: 50px;
+}
+@media (max-width: 807px){
+  /* .back-second-div{
+    line-height: 40px;
+  } */
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+.copyright {
+  background: var(--bg-color);
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.copyright p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--other-color);
+}
+.icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main-color);
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+.icon a:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 807px){
+  .back-first-div{
+    line-height: 35px;
+  }
+}
+@media (max-width: 355px){
+  .back-h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 249px){
+  .back-h1{
+    font-size: 25px;
+  }
+}
+@media (max-width: 1170px) {
+  header {
+    padding: 18px 2%;
+    transition: 0.2s;
+  }
+  section {
+    padding: 80px 2%;
+    transition: 0.3s;
+  }
+  :root {
+    --big-font: 4.7rem;
+    --h2-font: 2.5rem;
+  }
+  .home-text h4 {
+    font-size: 1.2rem;
+  }
+  .count span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1026px) {
+  header {
+    padding: 14px 2%;
+  }
+  .home {
+    height: 85vh;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: -650px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-color);
+    text-align: center;
+    transition: all 0.35s ease;
+  }
+  .navlist a {
+    display: block;
+    padding: 0rem;
+    margin: 1.2rem;
+    border: 2px solid aquamarine;
+    border-radius: 10px;
+  }
+  .navlist a:hover {
+    background: var(--text-color);
+    color: var(--secound-color);
+    border: none;
+  }
+  .navlist a::after {
+    display: none;
+  }
+  .navlist.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 609px) {
+  .contact {
+    text-align: center;
+  }
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+  .copyright {
+    justify-content: center;
+    text-align: center;
+  }
+  .copyright p {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 580px) {
+  :root {
+    --big-font: 3.5rem;
+    --h2-font: 1.9rem;
+    --p-font: 0.9rem;
+  }
+}
+
+@media (max-width: 580px) {
+  section {
+    padding: 90px 4%;
+  }
+  header {
+    padding: 14px 4%;
+  }
+  :root {
+    --big-font: 3.2rem;
+    --h2-font: 1.8rem;
+    --p-font: 0.9rem;
+  }
+  .mcqQuestion{
+    line-height: 30px;
+  }
+  .back-first-div{
+  margin-top: 60px;
+}
+}
+@media (max-width: 290px) {
+  :root {
+    --big-font: 1.9rem;
+    --h2-font: 1rem;
+    --p-font: 0.9rem;
+  }
+}
+
+   </style>
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,500;1,600&display=swap"
+rel="stylesheet"
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="bx bx-home"></i>
+    </div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    
+    <li>@Bargand</li>
+    <ul class="navlist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+  <main>
+  <!-- agronomy section -->
+    <section class="back-sec">
+      <div class="back-first-div" id="SeedScience">
+        <div><h1 class="back-h1">MCQ</h1></div>
+      </div>
+      <div class="mcqQuestion">
+        <h2>1. Which one of the following is essential factor for germinaton of seed ?</h2>
+        <p>a) Air. <br> b) Water. <br> c) Soil. <br> d) Tillage. <br>
+        <strong>Ans: a) Air.</strong></p>
+
+        <h2>2. For accuracy of agriculture experiments,What label of probablity is accepted ?</h2>
+        <p>a) 100% <br> b) 5% <br> c) 60% <br> d) 40%-55% <br>
+        <strong>Ans: b) 5%</strong></p>
+
+        <h2>3. What is the color of breeder seed tag ?</h2>
+        <p>a) Golden Yellow <br> b) Green <br> c) Blue <br> d) White <br>
+        <strong>Ans: a) Golden Yellow.</strong></p>
+
+        <h2>4. What is the color of Foundation seed tag ?</h2>
+        <p>a) Purple <br> b) Green <br> c) Blue <br> d) White <br>
+        <strong>Ans: d) White.</strong></p>
+
+        <h2>5. What is the color of Certified seed tag ?</h2>
+        <p>a) Blue <br> b) Purple <br> c) White <br> d) Golden Yellow <br>
+        <strong>Ans: a) Blue.</strong></p>
+
+        <h2>6. What is the color of Registered seed tag ?</h2>
+        <p>a) Purple <br> b) Green <br> c) Blue <br> d) White <br>
+        <strong>Ans: a) Purple.</strong></p>
+
+        <h2>7. What is the color of Truthful Label seed tag ?</h2>
+        <p>a) Blue. <br> b) Golden Yellow. <br> c) Green. <br> d) White. <br>
+        <strong>Ans: c) Green.</strong></p>
+
+        <h2>8. The progeny of cross between two plants is called ?</h2>
+        <p>
+          a) F1 <br> b) F2 <br> c)F4 <br> d)F1*F2 <br>
+          <strong>Ans: a) F1</strong>
+        </p>
+
+        <h2>9. International seed testing association was established ?</h2>
+        <p>
+          a)  1929<br> b)  1958<br> c) 1934<br> d) 1924<br>
+          <strong>Ans: d) 1924</strong>
+        </p>
+
+        <h2>10. Radicle is the future ?</h2>
+        <p>
+          a) Plant<br> b) Root<br> c) Shoot<br> d) Embryo<br>
+          <strong>Ans: b) Root</strong>
+        </p>
+
+        <h2>11. Plumule is the future ?</h2>
+        <p>
+          a)  Plant<br> b) Testa <br> c) Root<br> d) Shoot<br>
+          <strong>Ans: d) Shoot</strong>
+        </p>
+
+        <h2>12. The best examlpe of non-endospermic monocot is ?</h2>
+        <p>
+          a)  Wheet<br> b)  Alisma<br> c) Lima been<br> d) Castor<br>
+          <strong>Ans: b) Alisma</strong>
+        </p>
+
+        <h2>13. The best examlpe of endospermic dicot is ?</h2>
+        <p>
+          a)  Been<br> b)  Pea<br> c) Alisma<br> d) Castor<br>
+          <strong>Ans: d) Castor</strong>
+        </p>
+
+        <h2>14. When Seed have two cotyledon ?</h2>
+        <p>
+          a)  Dicot seed<br> b) Monocot seed<br> c) Endospermic Seed<br> d) Epidermic Seed<br>
+          <strong>Ans: a) Dicot seed</strong>
+        </p>
+
+        <h2>15. When Seed have one cotyledon ?</h2>
+        <p>
+          a)  Dicot seed<br> b) Monocot seed<br> c) Endospermic Seed<br> d) Epidermic Seed<br>
+          <strong>Ans: b) monocot seed</strong>
+        </p>
+
+        <h2>16. Dicot is a ?</h2>
+        <p>
+          a) Epidermic seed <br> b)  Endospermic seed<br> c) Non-endospermic seed<br> d) Good seed<br>
+          <strong>Ans: c) Non-endospermic seed</strong>
+        </p>
+
+        <h2>17. What is the moisture percentage of a seed ?</h2>
+        <p>
+          a)  26.39%<br> b)  57.8%<br> c) 2.5%<br> d) 3.6%<br>
+          <strong>Ans: d) 3.6%</strong>
+        </p>
+
+        <h2>18. In crop maturity what is the percentage of water ?</h2>
+        <p>
+          a) 18-35% <br> b) 58% <br> c) 10-13%<br> d) None of these<br>
+          <strong>Ans: a) 18-35%</strong>
+        </p>
+
+        <h2>19. Basis of longivity which seed is best ?</h2>
+        <p>
+          a)  Monocot seed<br> b)  Mesobiotic seed<br> c) Microbiotic seed<br> d) Macrobiotic seed<br>
+          <strong>Ans: d) Macrobiotic seed</strong>
+        </p>
+
+        <h2>20. Upper layer of groundnut is called ?</h2>
+        <p>
+          a) Testa <br> b)  Tegmen<br> c) Ebmryo<br> d) Hypocotyle<br>
+          <strong>Ans: a) Testa</strong>
+        </p>
+
+        <h2>21. What is the carbohydrate percentage of a seed ?</h2>
+        <p>
+          a) 2.4% <br> b) 10.07% <br> c) 15% <br> d) 54.3%<br>
+          <strong>Ans: b) 10.7%</strong>
+        </p>
+
+        <h2>22. Purity percentage of the cirtified seed ?</h2>
+        <p>
+          a) 99%<br> b)  97%<br> c) 80%<br> d) 100%<br>
+          <strong>Ans: a) 99%</strong>
+        </p>
+
+        <h2>23. Embryo is the furure ?</h2>
+        <p>
+          a)  Grain<br> b)  Shoot<br> c) Root<br> d) Plant<br>
+          <strong>Ans: d) Plant</strong>
+        </p>
+
+        <h2>24. What is fat percentage of a seed ?</h2>
+        <p>
+          a)  35.85<br> b)  70%<br> c) 2.08%<br> d) 57.85%<br>
+          <strong>Ans: d) 57.85%</strong>
+        </p>
+
+        <h2>25. The vigour test method thet estimates decarboxylation activities ?</h2>
+        <p>
+          a) Leachate test <br> b)  GADA test<br> c) ATpase<br> d) All of the above<br>
+          <strong>Ans: c) ATpase</strong>
+        </p>
+
+        <h2>26. Possible reason for seed dormancy are ?</h2>
+        <p>
+          a) Cracking of hylls <br> b)  Presence of pathogens<br> c) Immature embryo<br> d) All of the above<br>
+          <strong>Ans: c) Immature embryo </strong>
+        </p>
+
+        <h2>27. Registered seed is the progeny of ?</h2>
+        <p>
+          a)  Nuclear seed<br> b)  Foundation seed<br> c) Certified seed<br> d) Breeder seed<br>
+          <strong>Ans: b)  Foundation seed </strong>
+        </p>
+
+        <h2>28. Breeder seed is the progeny of ?</h2>
+        <p>
+          a)  Nuclear seed<br> b)  Foundation seed<br> c) Certified seed<br> d) Breeder seed<br>
+          <strong>Ans: a) Nuclear seed </strong>
+        </p>
+
+        <h2>29. Light substituting chemical is ?</h2>
+        <p>
+          a)  Auxin<br> b)  Gibberellin<br> c) Thiourea<br> d) ABA<br>
+          <strong>Ans: c) Thiourea </strong>
+        </p>
+
+        <h2>30. A seed which require pre chilling for germination is ?</h2>
+        <p>
+          a)  Lettuce<br> b)  AMaranthus<br> c) Ragi<br> d) None of These<br>
+          <strong>Ans: a) Lettuce </strong>
+        </p>
+
+        <h2>31. The respiration stimulant in germination of seed is ?</h2>
+        <p>
+          a)  KNO3<br> b)  H2O2<br> c) GA3<br> d) Thiourea<br>
+          <strong>Ans: b)  H2O2 </strong>
+        </p>
+
+        <h2>32. Critical moisture contant for soyabean seed germination ?</h2>
+        <p>
+          a)  50%<br> b)  30%<br> c) 40%<br> d) 60%<br>
+          <strong>Ans: a)  50% </strong>
+        </p>
+
+        <h2>33. Which is the living tissue of seed ?</h2>
+        <p>
+          a) Endosperm <br> b) Seed coat <br> c) Aleurone layer<br> d) Micropyle<br>
+          <strong>Ans: c) Aleurone layer </strong>
+        </p>
+        <h2>34. Food material is supplied to embryo in monocot through ?</h2>
+        <p>
+          a) Scutellum <br> b)  Plumule<br> c) Radical<br> d) Coeoptile<br>
+          <strong>Ans: a) Scutellum  </strong>
+        </p>
+        <h2>35. Miniature plant of the seed is ?</h2>
+        <p>
+          a)  Plumule<br> b)  Radicle<br> c) Cotyledon<br> d) Embryo<br>
+          <strong>Ans: d) Embryo </strong>
+        </p>
+        <h2>36. The perisperm is present in ?</h2>
+        <p>
+          a)  Coffee<br> b)  Maize<br> c) Groundnut<br> d) Cabbage<br>
+          <strong>Ans: a)  Coffee </strong>
+        </p>
+        <h2>37. In which year , the term synthetic seed has been coined ?</h2>
+        <p>
+          a)  1950<br> b)  1960<br> c) 1980<br> d) 1970<br>
+          <strong>Ans: d) 1970</strong>
+        </p>
+        <h2>38. Inhibitor coumarin is present in ?</h2>
+        <p>
+          a)  Cotton<br> b)  Groundnut<br> c) Coriander<br> d) Paddy<br>
+          <strong>Ans: c) Coriander</strong>
+        </p>
+        <h2>39. Triggers the breaking of seed dormancy ?</h2>
+        <p>
+          a)  Pfr<br> b)  Pr<br> c) Cytochrome<br> d) Chloroplast<br>
+          <strong>Ans: a)  Pfr </strong>
+        </p>
+        <h2>40. The hard seed coat can be removed by ?</h2>
+        <p>
+          a)  After ripening<br> b)  Acid scarification<br> c) Stratification<br> d) Drying<br>
+          <strong>Ans: b)  Acid scarification </strong>
+        </p>
+        <h2>41. Leaching of seed is the common practice in ?</h2>
+        <p>
+          a)  Coriender<br> b)  Potato<br> c) Tomato<br> d) Nutmeg<br>
+          <strong>Ans: a)  Coriender </strong>
+        </p>
+        <h2>42. Physicological dormency is caused due to ?</h2>
+        <p>
+          a)  Hard seed coat<br> b)  Under Developed embryo<br> c) Hard endocarp<br> d) Thick pericarp<br>
+          <strong>Ans: b)  Under Developed embryo </strong>
+        </p>
+        <h2>43. Dormency caused due to dark is called ?</h2>
+        <p>
+          a)  Photo dormency<br> b)  Thermo dormency<br> c) Skoto dormency<br> d) Innate dormency<br>
+          <strong>Ans: c) Skoto dormency </strong>
+        </p>
+        <h2>44. Safflower is grown during ?</h2>
+        <p>
+          a)  Rabi<br> b)  Kharif<br> c) Zaid<br> d) Rabi and Kharif both<br>
+          <strong>Ans: a)  Rabi </strong>
+        </p>
+        <h2>45. Germination is inhibited by ?</h2>
+        <p>
+          a)  Red light<br> b)  Blue light<br> c) IR light<br> d) UV light<br>
+          <strong>Ans: c) IR light </strong>
+        </p>
+        <h2>46. The interspecific hybrids are common in ?</h2>
+        <p>
+          a)  Sugarcan<br> b)  Rice<br> c) Cotton<br> d) Chilli<br>
+          <strong>Ans: a)  Sugarcan </strong>
+        </p>
+        <h2>47. Interaction between gene at different loci is known as ?</h2>
+        <p>
+          a)  Dominance<br> b)  Epistatis<br> c) Heterozygosity<br> d) Homozygosity<br>
+          <strong>Ans: b)  Epistatis </strong>
+        </p>
+        <h2>48. The term genetics was coined by ?</h2>
+        <p>
+          a)  Bateson(1905)<br> b)  J G Mendel(1884)<br> c) Johansem(1903)<br> d) Charles Darwin(1890)<br>
+          <strong>Ans: a)  Bateson(1905) </strong>
+        </p>
+        <h2>49. Which wnzyme is used for carbohydrate degradation ?</h2>
+        <p>
+          a)  Proteinase<br> b)  Lipase<br> c) Alpha amylase<br> d) Phosphatase<br>
+          <strong>Ans: c) Alpha amylase </strong>
+        </p>
+        <h2>50. Final product of gluconeogenesis is ?</h2>
+        <p>
+          a)  Fat<br> b)  Glycerol<br> c) Sucrose<br> d) Starch<br>
+          <strong>Ans: c) Sucrose </strong>
+        </p>
+
+      </div>
+    </section>
+    </main>
+    <footer>
+
+      <!-- copyright-->
+      <div class="copyright">
+        <p>&copy; 2023 All Rights | Design & Developed By Debargha Nandi</p>
+        <div class="icon">
+          <a href="https://www.facebook.com/debargha.nandi.1"><i class="bx bxl-facebook"></i></a>
+          <a href="https://wa.me/message/VYDMDJDCCR5RL1"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/in/debargha-nandi-76a311201/"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </footer>
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+      <!--link to js-->
+  
+      <script src="script.js"></script>
+    </body>
+  </html>
+  

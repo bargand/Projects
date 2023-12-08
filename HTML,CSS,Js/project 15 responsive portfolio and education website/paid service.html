@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link with icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>paid cource</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+      }
+      :root {
+        --bg-color: #ffffff;
+        --bg2-color: #f99fb6;
+        --bg3-color: #9fbef9;
+        --secound-bg-color: #f9f9f9;
+        --text-color: #fff;
+        --main2-color: #005a56;
+        --main-color: #ff1e00;
+        --text2-color: #6a6a6a;
+        /* --big-font: 5.7rem; */
+        --big-font: 4.7rem;
+        --h2-font: 3.8rem;
+        --p-font: 1.2rem;
+      }
+      .heading {
+        text-align: center;
+      }
+      .heading h2 {
+        text-align: center;
+        font-size: var(--h2-font);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.6rem;
+        color: var(--main2-color);
+        padding-top: 40px;
+      }
+      .heading p {
+        font-size: var(--p-font);
+        font-weight: 400;
+        line-height: 1.8;
+        color: var(--text2-color);
+        padding: 0 30px 0 30px;
+      }
+      .service-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .card {
+        min-width: 220px;
+        width: 320px;
+        padding: 30px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.575);
+        margin: 10px 10px;
+        box-shadow: 0px 15px 30px #00000033;
+      }
+      .card i {
+        margin: 20px;
+        color: var(--main2-color);
+        font-size: 40px;
+      }
+      .card i:hover {
+        color: #fff;
+      }
+      .card h3 {
+        margin-bottom: 12px;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #005a56;
+        text-align: center;
+      }
+      .card:hover {
+        background: linear-gradient(#16161610 0%, #005a56 100%);
+        transition: all 0.4s ease;
+      }
+      .card:hover p {
+        color: #fff;
+      }
+      .card:hover i {
+        color: var(--main-color);
+      }
+      @media (max-width: 1025px) {
+        .service-content {
+          flex-direction: column;
+          width: 100%;
+        }
+        .card {
+          min-width: 300px;
+          margin: 10px auto;
+        }
+      }
+      @media (max-width: 412px) {
+        .service-content {
+          flex-direction: column;
+          width: 100%;
+        }
+        .card {
+          min-width: 200px;
+          margin: 10px auto;
+        }
+        .heading p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <div class="heading">
+        <h2>All Paid Services</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est non sit
+          doloribus assumenda. <br />
+          tempora excepturi nemo ddd.
+        </p>
+        <div class="service-content">
+          <a href="#">
+            <div class="card">
+              <i class="bx bxs-leaf"></i>
+              <h3>ADO | ADA</h3>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="card">
+              <i class="bx bxs-bank"></i>
+              <h3>IBPS AFO</h3>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="card">
+              <i class="bx bx-book-bookmark"></i>
+              <h3>Msc.ENTRANCE</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+    </main>
+  </body>
+</html>

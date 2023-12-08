@@ -1,0 +1,44 @@
+.gamePlayBottomMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+.gamePlayBottomMain img {
+  width: 200px;
+  cursor: pointer;
+}
+.gamePlayBottomMain p {
+  font-size: 20px;
+}
+
+.mainBtn1 {
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 156px;
+  font-size: 16px;
+}
+.mainBtn1:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all ease-in-out 0.4s;
+}
+.mainBtn2 {
+  cursor: pointer;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 156px;
+  font-size: 16px;
+}
+.mainBtn2:hover {
+  background-color: transparent;
+  color: #000;
+  transition: all ease-in-out 0.4s;
+}
