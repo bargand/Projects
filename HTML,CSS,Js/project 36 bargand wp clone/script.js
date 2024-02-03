@@ -1,8 +1,9 @@
-// for highlited color change
-// const colors = ["#c1b001", "#a8140e", "#4315aa", "#359d09", "#8f4762"];
-
-// window.addEventListener("mousedown", (e) => {
-//   const color = colors.shift();
-//   document.documentElement.style.setProperty("--highlight-color", color);
-//   colors.push(color);
-// });
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
