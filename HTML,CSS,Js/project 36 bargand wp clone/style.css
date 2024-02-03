@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root {
   --main-color: #130f49;
@@ -79,11 +80,15 @@ body {
 .menu-list ul li {
   cursor: pointer;
   font-family: var(--text-font);
-  color: #55527c;
   font-size: 18px;
   font-weight: 400;
   line-height: 36px;
   list-style: none;
+}
+.menu-list ul li a{
+  text-decoration: none;
+  color: #55527c;
+
 }
 .icons {
   cursor: pointer;
@@ -500,7 +505,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e3f2fd;
+  background-color: var(--background-color);
+  flex-direction: column;
 }
 .testimonial {
   position: relative;
@@ -525,15 +531,16 @@ body {
   width: 100%;
 }
 .slide p {
+  font-family: var(--text-font);
   text-align: center;
   padding: 0 160px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color);
 }
 .slide .quote-icon {
   font-size: 30px;
-  color: #4070f4;
+  color: var(--second-color);
 }
 .slide .details {
   display: flex;
@@ -541,38 +548,19 @@ body {
   align-items: center;
 }
 .details .name {
-  font-size: 14px;
+  font-family: var(--main-heading);
+  font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: var(--main-color);
+  margin-bottom: 10px;
 }
 .details .job {
-  font-size: 12px;
+  font-family: var(--text-font);
+  font-size: 16px;
   font-weight: 400;
-  color: #333;
+  color: var(--text-color);
 }
-/* swiper button css */
-.nav-btn {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  transform: translateY(30px);
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
-}
-.nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.nav-btn::after,
-.nav-btn::before {
-  font-size: 20px;
-  color: #fff;
-}
-.swiper-pagination-bullet {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.swiper-pagination-bullet-active {
-  background-color: #4070f4;
-}
+
 @media screen and (max-width: 768px) {
   .slide p {
     padding: 0 20px;
@@ -580,4 +568,11 @@ body {
   .nav-btn {
     display: none;
   }
+}
+
+/* contact us container */
+.contact-container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 85px 20px 0px 20px;
 }
