@@ -1,9 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.main{
+.main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -12,44 +12,103 @@
   align-items: center;
   gap: 300px;
 }
-.firstDiv{
+.firstDiv {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.firstDiv1{
+.firstDiv1 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
 }
-.firstDiv2{
+.firstDiv2 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
 }
-.firstDiv3{
+.firstDiv3 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
 }
-.secondDivA{
+.secondDiv{
+  display: flex;
+  flex-direction: column;
+}
+.secondDivA {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.secondDivA1 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
-  margin-bottom: 300px;
+  /* margin-bottom: 300px; */
 }
-.secondDivB{
+.secondDivA2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  /* margin-bottom: 300px; */
+}
+.secondDivA3 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  /* margin-bottom: 300px; */
+}
+.secondDivB {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.secondDivB1 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
   border-radius: 50%;
   margin-top: 300px;
 }
-.thirdDiv{
+.secondDivB2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 300px;
+}
+.secondDivB3 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-top: 300px;
+}
+.thirdDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.thirdDiv1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.thirdDiv2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.thirdDiv3 {
   width: 100px;
   height: 100px;
   border: 1px solid black;
