@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Punnett Square F1 Generation</title>
+</head>
+<body>
+    <h1>Punnett Square F1 Generation Generator</h1>
+    <form id="punnettForm">
+        <label for="parent1">Parent 1 Genotype:</label>
+        <input type="text" id="parent1" name="parent1" value="YYRR" required>
+        <br>
+        <label for="parent2">Parent 2 Genotype:</label>
+        <input type="text" id="parent2" name="parent2" value="yyrr" required>
+        <br>
+        <button type="submit">Generate F1 Generation</button>
+    </form>
+    <h2>F1 Generation</h2>
+    <div id="f1Generation"></div>
+    <h2>F1 Genotype Permutations</h2>
+    <div id="genotypePermutations"></div>
+
+    <script>
+        document.getElementById('punnettForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const parent1 = document.getElementById('parent1').value;
+            const parent2 = document.getElementById('parent2').value;
+
+            function createGametes(parent) {
+                const numTraits = parent.length / 2;
+                const gametes = [];
+                for (let i = 0; i < (1 << numTraits); i++) {
+                    let gamete = '';
+                    for (let j = 0; j < numTraits; j++) {
+                        gamete += parent[j * 2 + ((i >> j) & 1)];
+                    }
+                    gametes.push(gamete);
+                }
+                return [...new Set(gametes)];
+            }
+
+            function createF1Generation(gametes1, gametes2) {
+                const f1 = [];
+                for (let g1 of gametes1) {
+                    for (let g2 of gametes2) {
+                        f1.push(g1 + g2);
+                    }
+                }
+                return f1.map(allelePair => allelePair.split('').sort().join('')).sort();
+            }
+
+            function generateCasePermutations(str) {
+                const results = [];
+                
+                function permute(prefix, index) {
+                    if (index === str.length) {
+                        results.push(prefix);
+                        return;
+                    }
+                    
+                    const char = str[index];
+                    permute(prefix + char.toLowerCase(), index + 1);
+                    permute(prefix + char.toUpperCase(), index + 1);
+                }
+                
+                permute('', 0);
+                return results;
+            }
+
+            const gametesParent1 = createGametes(parent1);
+            const gametesParent2 = createGametes(parent2);
+
+            const f1Generation = createF1Generation(gametesParent1, gametesParent2);
+            document.getElementById('f1Generation').innerText = `F1 Generation: ${f1Generation.join(', ')}`;
+
+            if (f1Generation.length === 1) {
+                const permutations = generateCasePermutations(f1Generation[0]);
+                document.getElementById('genotypePermutations').innerText = `F1 Genotype Permutations: ${permutations.join(', ')}`;
+            } else {
+                document.getElementById('genotypePermutations').innerText = 'F1 Genotype Permutations: Not applicable for multiple F1 genotypes.';
+            }
+        });
+    </script>
+</body>
+</html>
