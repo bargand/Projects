@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+}
+
+.calendar-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.day {
+    padding: 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.day:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.day.green {
+    background-color: #d4edda; /* Green for past meal counted */
+}
+
+.day.red {
+    background-color: #f8d7da; /* Red for meal stopped */
+}
+.day.yellow {
+    background-color: #fff3cd; /* Yellow for finished meal */
+}
+
+.day.red.finished::after {
+    content: "✔";
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#actions {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
